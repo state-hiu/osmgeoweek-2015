@@ -28,14 +28,14 @@
 
   <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:300italic,400italic|Montserrat:700|Asap:400,700' rel='stylesheet' type='text/css'>
   
-  <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon' />
+  <link rel='shortcut icon' href='/osmgeoweek-2015img/favicon.ico' type='image/x-icon' />
 
   <link href='http://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
-  <link href='/base/base.css' rel='stylesheet' />
-  <link href='/site.css' rel='stylesheet' />
+  <link href='/osmgeoweek-2015/base/base.css' rel='stylesheet' />
+  <link href='/osmgeoweek-2015/site.css' rel='stylesheet' />
   <link href='//api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
   <script src='//api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
-  <script src='/site.js'></script>
+  <script src='/osmgeoweek-2015/site.js'></script>
   <!-- Google Analytics -->
   
     <script>
@@ -54,12 +54,12 @@
 
 <div class='fill-dark dark'>
 <div class='site-navigation text-right space col12 pad2'>
-  <a href='/index.html' class='fl logo-text'><span class='text-green'>#</span><span class='text-white'>osm</span><span class='text-green'>geo</span><span class='text-white'>week</span></a>
-  <!-- <a class='strong ' href='/about/'>About</a> -->
-  <a class='small active' href='/events/'>Events</a>
-  <a class='small ' href='/projects/'>Projects</a>
-  <a class='small ' href='/plan/'>Guides</a>
-  <a class='small ' href='/metrics/'>Metrics</a>
+  <a href='/osmgeoweek-2015/index.html' class='fl logo-text'><span class='text-green'>#</span><span class='text-white'>osm</span><span class='text-green'>geo</span><span class='text-white'>week</span></a>
+  <!-- <a class='strong ' href='/osmgeoweek-2015/about/'>About</a> -->
+  <a class='small active' href='/osmgeoweek-2015/events/'>Events</a>
+  <a class='small ' href='/osmgeoweek-2015/projects/'>Projects</a>
+  <a class='small ' href='/osmgeoweek-2015/plan/'>Guides</a>
+  <a class='small ' href='/osmgeoweek-2015/metrics/'>Metrics</a>
   <a class='small' href='http://osmstories.org/' target="_blank">OSM Stories</a>
   </div>
 </div>
@@ -76,7 +76,7 @@
   <div class='limiter'>
     <div class='pad2y'>
       <h1 class='space-bottom1 space-top4'>Events</h1>
-      <p class='prose-big'> Find an event near you. Or, let us know if you are <a href="/plan/">planning an event</a>, <a href="http://goo.gl/forms/bBI3pQ1IE6">submit the details</a> or </a><a href="mailto:mapgive@state.gov">get in touch</a>!</p>
+      <p class='prose-big'> Find an event near you. Or, let us know if you are <a href="/osmgeoweek-2015/plan/">planning an event</a>, <a href="http://goo.gl/forms/bBI3pQ1IE6">submit the details</a> or </a><a href="mailto:mapgive@state.gov">get in touch</a>!</p>
     </div>
   </div>
 </div>
@@ -94,7 +94,7 @@ map.once('focus', function() { map.scrollWheelZoom.enable(); });
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '<a href="http://osm.org/copyright">&copy; OpenStreetMap contributors</a>'
 }).addTo(map);
-var featureLayer = L.mapbox.featureLayer().loadURL('/events.geojson',{ style: L.mapbox.simplestyle.style }).addTo(map);
+var featureLayer = L.mapbox.featureLayer().loadURL('/osmgeoweek-2015/events.geojson',{ style: L.mapbox.simplestyle.style }).addTo(map);
 //var featureLayer = L.geoJson(geojson, { style: L.mapbox.simplestyle.style }).addTo(map);
 
  featureLayer.on('ready', function() {
@@ -129,7 +129,7 @@ featureLayer.on('layeradd', function(e) {
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/osm-peru/'>OSM Peru Mapathon - Callao, Lima, Peru</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/osm-peru/'>OSM Peru Mapathon - Callao, Lima, Peru</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 1:00pm | Saturday, November 14
@@ -150,7 +150,7 @@ featureLayer.on('layeradd', function(e) {
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/mapbox-peru/'>Mapbox Mapathon - Ayacucho, Peru</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/mapbox-peru/'>Mapbox Mapathon - Ayacucho, Peru</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:00am - 5:00pm | Saturday, November 14
@@ -186,7 +186,7 @@ featureLayer.on('layeradd', function(e) {
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/mapbox-bengaluru/'>Mapbox Mapping Party - Bengaluru, India</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/mapbox-bengaluru/'>Mapbox Mapping Party - Bengaluru, India</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 10:00am - 5:00pm | Sunday
@@ -209,7 +209,7 @@ featureLayer.on('layeradd', function(e) {
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/mm-seattle/'>Missing Maps Anniversary Mapathon - Seattle, WA</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/mm-seattle/'>Missing Maps Anniversary Mapathon - Seattle, WA</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 12:00pm - 5:00pm | Sunday
@@ -230,7 +230,7 @@ featureLayer.on('layeradd', function(e) {
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/uot-knox/'>University of Tennessee at Knoxville Mapathon - Knoxville, TN</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/uot-knox/'>University of Tennessee at Knoxville Mapathon - Knoxville, TN</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 7:00pm | Sunday
@@ -251,7 +251,7 @@ featureLayer.on('layeradd', function(e) {
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/lima-peru/'>OSM Peru Mapathon - Callao, Lima, Peru</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/lima-peru/'>OSM Peru Mapathon - Callao, Lima, Peru</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 4:00pm | Sunday
@@ -287,7 +287,7 @@ featureLayer.on('layeradd', function(e) {
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/ati-kos3/'>ATI-KOS & University AAB Mapathon - Gjakova, Kosovo</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/ati-kos3/'>ATI-KOS & University AAB Mapathon - Gjakova, Kosovo</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 1:00pm - 5:00pm | Monday
@@ -308,7 +308,7 @@ featureLayer.on('layeradd', function(e) {
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/ithca/'>Ithaca Geoweek Mapping Party - Ithaca, NY</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/ithca/'>Ithaca Geoweek Mapping Party - Ithaca, NY</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 5:30pm - 8:00pm | Monday
@@ -330,7 +330,7 @@ Location: Big Red Barn (Cornell campus)</p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/kinnaird-pk/'>Kinnaird College for Women University (KCWU) Mapathon - Lahore, Pakistan</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/kinnaird-pk/'>Kinnaird College for Women University (KCWU) Mapathon - Lahore, Pakistan</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 2:30pm - 5:00pm | Monday
@@ -352,7 +352,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/manic-zambia/'>Manic Mapathon - Zambia</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/manic-zambia/'>Manic Mapathon - Zambia</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 TBD | Monday
@@ -373,7 +373,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/peace-corps-dc/'>Peace Corps Community Mapping Party - Washington, DC</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/peace-corps-dc/'>Peace Corps Community Mapping Party - Washington, DC</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 6:30pm - 8:30pm | Monday
@@ -409,7 +409,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/bologna/'>DICAM - University of Bologna Mapathon  - Bologna, Italy</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/bologna/'>DICAM - University of Bologna Mapathon  - Bologna, Italy</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 11:00am - 1:00pm | Tuesday
@@ -430,7 +430,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/lusaka-zam/'>OSM Zambia Mapathon - Lusaka, Zambia</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/lusaka-zam/'>OSM Zambia Mapathon - Lusaka, Zambia</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:00am - 1:00pm | Tuesday
@@ -451,7 +451,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/ati-kos2/'>ATI-KOS & Bonevet Makerspace Mapathon - Gjakova, Kosovo</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/ati-kos2/'>ATI-KOS & Bonevet Makerspace Mapathon - Gjakova, Kosovo</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 1:00pm - 5:00pm | Tuesday
@@ -472,7 +472,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/geoweekmnl2015'>Map the Philippines and Mozilla Mapping Party - Makati, Philippines</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/geoweekmnl2015'>Map the Philippines and Mozilla Mapping Party - Makati, Philippines</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 01:00pm - 6:00pm | Tuesday
@@ -493,7 +493,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/groningen/'>University of Groningen Mapathon - Groningen, Netherlands</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/groningen/'>University of Groningen Mapathon - Groningen, Netherlands</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 5:00pm | Tuesday
@@ -514,7 +514,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/bnu-pk/'>Beaconhouse National University (BNU) Mapathon - Lahore, Pakistan</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/bnu-pk/'>Beaconhouse National University (BNU) Mapathon - Lahore, Pakistan</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 2:30pm - 5:00pm | Tuesday
@@ -536,7 +536,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/cartong/'>CartONG Mapathon - Chambery, France</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/cartong/'>CartONG Mapathon - Chambery, France</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 6:00pm - 9:00pm | Tuesday
@@ -558,7 +558,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/msf-newcastle/'>Missing Maps and Friends of MSF Newcastle Mapathon - Newcastle, England</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/msf-newcastle/'>Missing Maps and Friends of MSF Newcastle Mapathon - Newcastle, England</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 6:00pm - 9:30pm | Tuesday
@@ -579,7 +579,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/ho-ho-kus/'>Ho-Ho-Kus 8th Grade Mapathon - Ho-Ho-Kus, NJ</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/ho-ho-kus/'>Ho-Ho-Kus 8th Grade Mapathon - Ho-Ho-Kus, NJ</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:30am | Tuesday
@@ -600,7 +600,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/iug-norge/'>Engineers Without Borders Norway (IUG Norge) - Bergen, Norway</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/iug-norge/'>Engineers Without Borders Norway (IUG Norge) - Bergen, Norway</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 5:00pm - 7:00pm | Tuesday
@@ -622,7 +622,7 @@ Sign up <a href="http://www.iug.no/">here</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/temple/'>Temple University Mapathon - Philadelphia, PA</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/temple/'>Temple University Mapathon - Philadelphia, PA</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 TBD | Tuesday
@@ -643,7 +643,7 @@ Sign up <a href="http://www.iug.no/">here</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/dibrugarh/'>Dibrugarh University Mapathon - Dibrugarh, India</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/dibrugarh/'>Dibrugarh University Mapathon - Dibrugarh, India</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:30am - 4:30pm | Tuesday
@@ -664,7 +664,7 @@ Sign up <a href="http://www.iug.no/">here</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/ucf/'>University of Central Florida Mapathon - Orlando, FL</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/ucf/'>University of Central Florida Mapathon - Orlando, FL</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 3:30pm | Tuesday
@@ -685,7 +685,7 @@ Sign up <a href="http://www.iug.no/">here</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/smu/'>Southern Methodist University Mapathon - Dallas, TX</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/smu/'>Southern Methodist University Mapathon - Dallas, TX</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 11:00am | Tuesday
@@ -706,7 +706,7 @@ Sign up <a href="http://www.iug.no/">here</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/dean-ms/'>Alice Deal Middle School Mapathon - Washington, DC</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/dean-ms/'>Alice Deal Middle School Mapathon - Washington, DC</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 4:30pm - 6:30pm | Tuesday
@@ -727,7 +727,7 @@ Sign up <a href="http://www.iug.no/">here</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/clark-u/'>Clark University Mapathon - Worcester, MA</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/clark-u/'>Clark University Mapathon - Worcester, MA</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 12:00pm -  2:00pm | Tuesday
@@ -748,7 +748,7 @@ Sign up <a href="http://www.iug.no/">here</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/missingmaps-london/'>Missing Maps and MSF UK - London, England</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/missingmaps-london/'>Missing Maps and MSF UK - London, England</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 18:00 | Tuesday
@@ -786,7 +786,7 @@ Sign up <a href="http://www.iug.no/">here</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/st-lawrence/'>Missing Maps St. Lawrence University Mapathon  - Canton, NY</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/st-lawrence/'>Missing Maps St. Lawrence University Mapathon  - Canton, NY</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 11:30am - 1:00pm | Wednesday
@@ -807,7 +807,7 @@ Sign up <a href="http://www.iug.no/">here</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/rennes/'>Rennes 2 University Mapathon  - Rennes, France</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/rennes/'>Rennes 2 University Mapathon  - Rennes, France</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 5:30pm | Wednesday
@@ -828,7 +828,7 @@ Sign up <a href="http://www.iug.no/">here</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/kelaniya/'>Kelaniya Mapathon</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/kelaniya/'>Kelaniya Mapathon</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 8:30 AM - 1:00 PM | Wednesday
@@ -849,7 +849,7 @@ Sign up <a href="http://www.iug.no/">here</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/mali/'>GIS Day - Bamako, Mali</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/mali/'>GIS Day - Bamako, Mali</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 TDB | Wednesday
@@ -874,7 +874,7 @@ Exposition de produit, Projection vidéo, Formation</p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/luc-dec/'>LUC and DEC Mapathon - London, England</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/luc-dec/'>LUC and DEC Mapathon - London, England</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 5:00pm | Wednesday
@@ -895,7 +895,7 @@ Exposition de produit, Projection vidéo, Formation</p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/fcc-pk/'>Forman Christian College (FCC) Mapathon - Lahore, Pakistan</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/fcc-pk/'>Forman Christian College (FCC) Mapathon - Lahore, Pakistan</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 10:00am - 12:30pm | Wednesday
@@ -917,7 +917,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/wm/'>OpenStreetMap Mapathon at William & Mary - Williamsburg, VA</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/wm/'>OpenStreetMap Mapathon at William & Mary - Williamsburg, VA</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 6:00pm | Wednesday
@@ -940,7 +940,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/umt-pk/'>University of Management & Technology (UMT) Mapathon - Lahore, Pakistan</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/umt-pk/'>University of Management & Technology (UMT) Mapathon - Lahore, Pakistan</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 2:30pm - 5:00pm | Wednesday
@@ -962,7 +962,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/ucd-mmh/'>University of Colorado-Denver Mapathon - Denver, CO</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/ucd-mmh/'>University of Colorado-Denver Mapathon - Denver, CO</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 6:00pm | Wednesday
@@ -983,7 +983,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/msf-nyc/'>Doctors Without Borders (MSF) Mapathon, New York, NY</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/msf-nyc/'>Doctors Without Borders (MSF) Mapathon, New York, NY</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 4:00pm 6:00pm | Wednesday
@@ -1004,7 +1004,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/george-school/'>George Heriot School Mapathon - Edinburgh, Scotland</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/george-school/'>George Heriot School Mapathon - Edinburgh, Scotland</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 TBD | Wednesday
@@ -1025,7 +1025,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/gis-or/'>GIS Day Mapathon - Portand Oregon</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/gis-or/'>GIS Day Mapathon - Portand Oregon</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 4:00pm - 6:00pm | Wednesday
@@ -1046,7 +1046,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/msf-cork/'>UCC Friends of MSF Mapathon - Cork, Ireland</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/msf-cork/'>UCC Friends of MSF Mapathon - Cork, Ireland</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 7:00pm | Wednesday
@@ -1067,7 +1067,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/stanford/'>Stanford University Mapathon - Standford, CA</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/stanford/'>Stanford University Mapathon - Standford, CA</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 2:00pm -  4:00pm | Wednesday
@@ -1088,7 +1088,7 @@ MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/mm-sfsu/'>Missing Maps OSM Mapathon at San Francisco State University - San Francisco, CA</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/mm-sfsu/'>Missing Maps OSM Mapathon at San Francisco State University - San Francisco, CA</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 5:30pm - 8:00pm | Wednesday
@@ -1110,7 +1110,7 @@ Sign up <a href="https://www.eventbrite.com/e/missing-maps-open-street-mapathon-
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/bali-green-school/'>Green School Bali Mapathon with HOT - Ubud, Indonesia</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/bali-green-school/'>Green School Bali Mapathon with HOT - Ubud, Indonesia</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:00am - 12:00pm | Wednesday
@@ -1131,7 +1131,7 @@ Sign up <a href="https://www.eventbrite.com/e/missing-maps-open-street-mapathon-
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/sipa-rpcv/'>Columbia University Returned Peace Corps Volunteers Mapathon - New York, NY</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/sipa-rpcv/'>Columbia University Returned Peace Corps Volunteers Mapathon - New York, NY</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 5:00pm - 7:00pm | Wednesday
@@ -1152,7 +1152,7 @@ Sign up <a href="https://www.eventbrite.com/e/missing-maps-open-street-mapathon-
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/n-ireland/'>Land & Property Services Mapathon - Belfast, N. Ireland</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/n-ireland/'>Land & Property Services Mapathon - Belfast, N. Ireland</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 12:00pm | Wednesday
@@ -1173,7 +1173,7 @@ Sign up <a href="https://www.eventbrite.com/e/missing-maps-open-street-mapathon-
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/umd/'>University of Maryland Mapathon - College Park, MD</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/umd/'>University of Maryland Mapathon - College Park, MD</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 3:00pm | Wednesday
@@ -1194,7 +1194,7 @@ Sign up <a href="https://www.eventbrite.com/e/missing-maps-open-street-mapathon-
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/teachOSM/'>TeachOSM Mapathon - Washington, DC</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/teachOSM/'>TeachOSM Mapathon - Washington, DC</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:00am - 4:00pm | Wednesday
@@ -1215,7 +1215,7 @@ Sign up <a href="https://www.eventbrite.com/e/missing-maps-open-street-mapathon-
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/colorado-state/'>Colorado State University Humanitarian Mapathon - Fort Collins, CO</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/colorado-state/'>Colorado State University Humanitarian Mapathon - Fort Collins, CO</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:00am - 5:00pm | Wednesday
@@ -1251,7 +1251,7 @@ Sign up <a href="https://www.eventbrite.com/e/missing-maps-open-street-mapathon-
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/ug-it/'>University of Gothenburg Mapathon  - Gothenburg, Sweden</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/ug-it/'>University of Gothenburg Mapathon  - Gothenburg, Sweden</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 4:00pm - 6:00pm | Thursday
@@ -1272,7 +1272,7 @@ Sign up <a href="https://www.eventbrite.com/e/missing-maps-open-street-mapathon-
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/und/'>University of North Dakota Department of Geography and GIScience Mapathon  - Grand Forks, ND</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/und/'>University of North Dakota Department of Geography and GIScience Mapathon  - Grand Forks, ND</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:30am | Thursday
@@ -1294,7 +1294,7 @@ Join the University of North Dakota's Department of Geography and GIScience map 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/maptime-boulder/'>Maptime Boulder - Boulder, CO</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/maptime-boulder/'>Maptime Boulder - Boulder, CO</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 6:30pm | Thursday
@@ -1316,7 +1316,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/malabe/'>SLIIT Mapathon</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/malabe/'>SLIIT Mapathon</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 10:00 AM - 4:30 PM | Thursday
@@ -1337,7 +1337,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/geo-2050/'>Geography 2050 - New York, NY</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/geo-2050/'>Geography 2050 - New York, NY</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 4:30pm - 5:30pm | Thursday
@@ -1358,7 +1358,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/ggas/'>Graduate Geography Student Association (GGSA) Mapathon - Buffalo, NY</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/ggas/'>Graduate Geography Student Association (GGSA) Mapathon - Buffalo, NY</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 6:00pm | Thursday
@@ -1379,7 +1379,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/geotec-uji/'>GEOTEC - UJI Mapathon - Castellon, Spain</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/geotec-uji/'>GEOTEC - UJI Mapathon - Castellon, Spain</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 10:00am - 1:00pm | Thursday
@@ -1400,7 +1400,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/osm-institutions/'>Access for All: OSM GeoWeek 2015</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/osm-institutions/'>Access for All: OSM GeoWeek 2015</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 6:30pm - 9:00pm | Thursday
@@ -1421,7 +1421,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/ue-geog/'>University of Exeter Mapathon - Exeter, England</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/ue-geog/'>University of Exeter Mapathon - Exeter, England</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 6:00pm - 8:00pm | Thursday
@@ -1442,7 +1442,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/polimi/'>Politecnico di Milano Mapathon - Milano, Italy</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/polimi/'>Politecnico di Milano Mapathon - Milano, Italy</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 2:15pm | Thursday
@@ -1463,7 +1463,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/sao-paulo/'>University of São Paulo Mapathon - São Carlos, Brazil</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/sao-paulo/'>University of São Paulo Mapathon - São Carlos, Brazil</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 6:00pm | Thursday
@@ -1499,7 +1499,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/mary-washington/'>Map-A-Palooza II -  Fredericksburg, VA</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/mary-washington/'>Map-A-Palooza II -  Fredericksburg, VA</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 4:00pm - 8:00pm | Friday
@@ -1520,7 +1520,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/busitema-uni/'>Busitema University Mapathon - Busitema, Uganda</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/busitema-uni/'>Busitema University Mapathon - Busitema, Uganda</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 2:00pm - 6:00pm | Friday
@@ -1541,7 +1541,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/goedesy-zagreb/'>Field Paper Pub Crawl - Zagreb, Croatia</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/goedesy-zagreb/'>Field Paper Pub Crawl - Zagreb, Croatia</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 8:00pm | Friday
@@ -1562,7 +1562,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/kll-geocache/'>Kathmandu Living Labs OSM Geocaching - Kathmandu, Nepal</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/kll-geocache/'>Kathmandu Living Labs OSM Geocaching - Kathmandu, Nepal</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:00am - 1:00pm | Friday
@@ -1583,7 +1583,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/ati-kos/'>ATI-KOS Mapathon - Pristina, Kosovo</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/ati-kos/'>ATI-KOS Mapathon - Pristina, Kosovo</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 1:00pm - 5:00pm | Wednesday
@@ -1604,7 +1604,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/hms-gwu/'>GW Humanitarian Mapping Society Mapathon - Washington, DC</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/hms-gwu/'>GW Humanitarian Mapping Society Mapathon - Washington, DC</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 5:00pm | Friday
@@ -1626,7 +1626,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/uganda-wairaka/'>Mapping day Uganda - Wairaka, Uganda</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/uganda-wairaka/'>Mapping day Uganda - Wairaka, Uganda</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 12:00pm - 5:00pm | Friday
@@ -1647,7 +1647,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/kampala/'>Mapathon - Kampala, Uganda</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/kampala/'>Mapathon - Kampala, Uganda</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:00am - 4:00pm | Friday
@@ -1668,7 +1668,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/george-mason/'>George Mason University - Fairfax, VA</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/george-mason/'>George Mason University - Fairfax, VA</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 4:00pm - 8:00pm | Friday
@@ -1708,7 +1708,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/helsinki/'>OSM Mapathon Helsinki - Helsinki, Finland</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/helsinki/'>OSM Mapathon Helsinki - Helsinki, Finland</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 10:30am - 2:30pm | Saturday
@@ -1729,7 +1729,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/mexico/'>OSMGeoWeek en México</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/mexico/'>OSMGeoWeek en México</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 3:00pm | Saturday
@@ -1753,7 +1753,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/wikimedia/'>Wikimedia Italia OSM Event  - Bologna, Italy</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/wikimedia/'>Wikimedia Italia OSM Event  - Bologna, Italy</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 10:00am | Saturday
@@ -1774,7 +1774,7 @@ This meeting we'll celebrate GIS Day by learning humanitarian mapping using the 
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/geoinquietos/'>Geoinquietos Madrid Mapathon - Madrid, Spain</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/geoinquietos/'>Geoinquietos Madrid Mapathon - Madrid, Spain</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 11:00am | Saturday
@@ -1796,7 +1796,7 @@ Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/jomo-kenya/'>Jomo Kenyatta University of Agriculture and Technology Mapathon - Juja, Kenya</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/jomo-kenya/'>Jomo Kenyatta University of Agriculture and Technology Mapathon - Juja, Kenya</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 TBD | Saturday
@@ -1817,7 +1817,7 @@ Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/cidst-mad/'>OSM Madagascar Mapathon - Antananarivo, Madagascar</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/cidst-mad/'>OSM Madagascar Mapathon - Antananarivo, Madagascar</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:00am - 12:00pm | Saturday
@@ -1838,7 +1838,7 @@ Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/chicago/'>Missing Maps Chicago Mapathon - Chicago, IL</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/chicago/'>Missing Maps Chicago Mapathon - Chicago, IL</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:30am - 2:30pm | Saturday
@@ -1859,7 +1859,7 @@ Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/jakarta/'>Rinjani Volcano Mapathon, OpenStreetMap Indonesia - Jakarta, Indonesia</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/jakarta/'>Rinjani Volcano Mapathon, OpenStreetMap Indonesia - Jakarta, Indonesia</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 1:00pm - 3:00pm | Saturday
@@ -1880,7 +1880,7 @@ Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/girl-scouts/'>Girls Scouts and Peace Corps Mapathon - Washington, DC</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/girl-scouts/'>Girls Scouts and Peace Corps Mapathon - Washington, DC</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 11:00am - 1:00pm | Saturday
@@ -1901,7 +1901,7 @@ Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/osm-brasilia/'>OSM Brasilia Mapathon - Brasilia, Brazil</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/osm-brasilia/'>OSM Brasilia Mapathon - Brasilia, Brazil</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 4:00pm | Saturday
@@ -1922,7 +1922,7 @@ Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/uganda-jinja/'>Mapping Day Uganda - BIT MAK Jinja, Uganda</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/uganda-jinja/'>Mapping Day Uganda - BIT MAK Jinja, Uganda</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                 9:00am - 5:00pm | Saturday
@@ -1943,7 +1943,7 @@ Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/cotonou/'>Communauté OpenStreeMap Benin - Cotonou, Benin</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/cotonou/'>Communauté OpenStreeMap Benin - Cotonou, Benin</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                  | Saturday
@@ -1964,7 +1964,7 @@ Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/dar-es-salaam/'>HOT Mapathon - Dar es Salaam, Tanzania</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/dar-es-salaam/'>HOT Mapathon - Dar es Salaam, Tanzania</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                  | Saturday
@@ -1985,7 +1985,7 @@ Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón
           <div class='col12 pad1y clearfix '>
             <div>
               <div class='headline clearfix space-bottom1'>
-                <h2><a href='/event/duitama/'>Colegio Salesiano de Duitama - Duitama, Colombia</a></h2>
+                <h2><a href='/osmgeoweek-2015/event/duitama/'>Colegio Salesiano de Duitama - Duitama, Colombia</a></h2>
                 <span class='text-right quiet'></span>
                 <span class='strong'>
                  | Saturday
@@ -2037,27 +2037,27 @@ Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón
         <a href='http://www.missingmaps.org/' class='sponsor missingmaps'>Missing Maps</a>
         <!--<a href='https://www.usaid.gov/GlobalDevLab' class='sponsor usaid'>USAID GeoCenter</a>-->
 	      <a href='https://www.usaid.gov/GlobalDevLab' >
-	         <img src="/img/logos/usaid.png" style="height:105px;">
+	         <img src="/osmgeoweek-2015/img/logos/usaid.png" style="height:105px;">
 	      </a>
         <a href='http://www.nationalgeographic.com/' class='sponsor natgeo'>National Geographic</a>
         <a href='http://www.peacecorps.gov/' >
-	        <img src="/img/logos/peace-corps.png" style="height:105px;">
+	        <img src="/osmgeoweek-2015/img/logos/peace-corps.png" style="height:105px;">
 	      </a>
         <a href='https://www.gfdrr.org/' >
-	        <img src="/img/logos/gfdrr.png" style="height:105px;">
+	        <img src="/osmgeoweek-2015/img/logos/gfdrr.png" style="height:105px;">
 	      </a>
         <a href='http://www.aag.org/' >
-	        <img src="/img/logos/aag.png" style="height:105px;">
+	        <img src="/osmgeoweek-2015/img/logos/aag.png" style="height:105px;">
 	      </a>
         <a href='http://eca.state.gov/programs-initiatives/international-education-week' >
-	        <img src="/img/logos/iew_blue_logo_0.jpg" style="height:105px;">
+	        <img src="/osmgeoweek-2015/img/logos/iew_blue_logo_0.jpg" style="height:105px;">
 	      </a>
         <a href='http://www.ncge.org/' >
-	        <img src="/img/logos/ncge.png" style="height:105px;">
+	        <img src="/osmgeoweek-2015/img/logos/ncge.png" style="height:105px;">
 	      </a>
         <a href='http://kathmandulivinglabs.org/' class='sponsor kll'>Kathmandu Living Labs</a>
         <a href='http://americangeo.org/' >
-          <img src="/img/logos/ags.jpg" style="height:105px;">
+          <img src="/osmgeoweek-2015/img/logos/ags.jpg" style="height:105px;">
         </a>
       </nav>
     </div>
