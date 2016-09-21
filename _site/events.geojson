@@ -5,6 +5,22 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "OSM Mapathon Helsinki - Helsinki, Finland",
+        "url": "/event/helsinki/",
+        
+         "marker-color": "#4747A3"
+        
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.93293, 60.16582]
+      }
+    },
+    
+    
+    {
+      "type": "Feature",
+      "properties": {
         "title": "OSMGeoWeek en México",
         "url": "/event/mexico/",
         
