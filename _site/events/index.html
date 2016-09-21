@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name='robots' content='index'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <meta property='og:site_name' content='OpenStreetMap - Geography Awareness Week' />
+  <meta property='og:url' content='' />
+  <meta property='og:title' content='Events' />
+  <meta property='og:description' content='Sign up for an event near you or plan your own mapathon. You can contribute to mapping projects around the world and explore the power of maps! Get in touch, we're happy to help!' />
+  <meta property='og:type' content='website' />
+
+  <!-- Twitter Cards -->
+
+  <meta name='twitter:card' content='summary_large_image' />
+  <meta name='twitter:site' content='@osmgeoweek' />
+  <meta name='twitter:title' content='Events' />
+  <meta name='twitter:description' content="Sign up for an event near you or plan your own mapathon. You can contribute to mapping projects around the world and explore the power of maps! Get in touch, we're happy to help!" />
+
+  
+  <meta name='twitter:image' content='http://osmgeoweek.org/img/twittercard.png' />
+  <meta name='st:image' content='http://osmgeoweek.org/img/twittercard.png' />
+  <meta property='og:image' content='http://osmgeoweek.org/img/twittercard.png' />
+  
+
+  <title>Events | OpenStreetMap Geography Awareness Week</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:300italic,400italic|Montserrat:700|Asap:400,700' rel='stylesheet' type='text/css'>
+  
+  <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon' />
+
+  <link href='http://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
+  <link href='/base/base.css' rel='stylesheet' />
+  <link href='/site.css' rel='stylesheet' />
+  <link href='//api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+  <script src='//api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+  <script src='/site.js'></script>
+  <!-- Google Analytics -->
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-24614711-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  
+</head>
+<body class=''>
+
+<div class='fill-dark dark'>
+<div class='site-navigation text-right space col12 pad2'>
+  <a href='/index.html' class='fl logo-text'><span class='text-green'>#</span><span class='text-white'>osm</span><span class='text-green'>geo</span><span class='text-white'>week</span></a>
+  <!-- <a class='strong ' href='/about/'>About</a> -->
+  <a class='small active' href='/events/'>Events</a>
+  <a class='small ' href='/projects/'>Projects</a>
+  <a class='small ' href='/plan/'>Guides</a>
+  <a class='small ' href='/metrics/'>Metrics</a>
+  <a class='small' href='http://osmstories.org/' target="_blank">OSM Stories</a>
+  </div>
+</div>
+
+<!--
+<div class='fill-red'>
+  <div class='liner clearfix center fill-darken3 dark col12'>
+    <h3 class='pad2'><a href="/result/">Check out the results from OSMGeoWeek. Stats, photos, visualizations</a></h3>
+  </div>
+</div>
+-->
+
+<div class='fill-green dark'>
+  <div class='limiter'>
+    <div class='pad2y'>
+      <h1 class='space-bottom1 space-top4'>Events</h1>
+      <p class='prose-big'> Find an event near you. Or, let us know if you are <a href="/plan/">planning an event</a>, <a href="http://goo.gl/forms/bBI3pQ1IE6">submit the details</a> or </a><a href="mailto:mapgive@state.gov">get in touch</a>!</p>
+    </div>
+  </div>
+</div>
+
+<div id="map" style="min-height: 350px;"></div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiZ3JvdW5kdHJ1dGgiLCJhIjoiS21jd2M3NCJ9.Oh7jfB2FCjkVHszCFLS-pg';
+var map = L.mapbox.map('map',  null, { infoControl: false, attributionControl: true, minZoom: 2,
+      maxZoom: 16, scrollWheelZoom: false });
+// map.attributionControl.setPrefix('');
+
+//http://gis.stackexchange.com/questions/111887/leaflet-mouse-wheel-zoom-only-after-click-on-map
+map.once('focus', function() { map.scrollWheelZoom.enable(); });
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '<a href="http://osm.org/copyright">&copy; OpenStreetMap contributors</a>'
+}).addTo(map);
+var featureLayer = L.mapbox.featureLayer().loadURL('/events.geojson',{ style: L.mapbox.simplestyle.style }).addTo(map);
+//var featureLayer = L.geoJson(geojson, { style: L.mapbox.simplestyle.style }).addTo(map);
+
+ featureLayer.on('ready', function() {
+  map.fitBounds(featureLayer.getBounds());
+});
+featureLayer.on('layeradd', function(e) {
+  var marker = e.layer,
+  feature = marker.feature;
+  // Create custom popup content
+  var popupContent =  '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
+  '<h2 class="text-center">'+feature.properties.title+'</h2></a>';
+  // http://leafletjs.com/reference.html#popup
+  marker.bindPopup(popupContent,{
+    minWidth: 200,
+    closeButton: false
+  });
+}); 
+</script>
+
+
+  
+  
+  <div class='pad2y'>
+    <div class='limiter'>
+      <div class='col12 quiet space-bottom1  '>
+        <h3 class='col12 pad2y'>
+          Saturday, November 14th (starting a day early!)
+        </h3>
+      </div>
+      <div class='col12 pad1y'>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/osm-peru/'>OSM Peru Mapathon - Callao, Lima, Peru</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                1:00pm | Saturday, November 14
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Hola, con motivo de celebrarse a nivel mundial la OSMGeoWeek (Semana de Concienciación Geográfica – OpenStreetMap) conjuntamente con la <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Peru">Comunidad peruana de OpenStreetMap</a> y con la colaboración de la <a href="http://municarmendelalegua.gob.pe/">Municipalidad de Carmen de la Legua – Reynoso</a>, nos encontramos organizando una “Mapping Raymi” (Jornada de Cartografía Social Libre y Colaborativa) en este distrito del Callao, con la finalidad de formar cartógrafos sociales y producir <a href="http://www.openstreetmap.org/#map=16/-12.0425/-77.0893">un mapa del distrito</a> colaborativo abierto y libre que pueda servir como insumo para la realización de diferentes proyectos por parte de las vecinas y vecinos.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/mapbox-peru/'>Mapbox Mapathon - Ayacucho, Peru</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:00am - 5:00pm | Saturday, November 14
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Mapbox will host a mapathon on November 14, in Ayacucho, Peru to improve the Ayacucho cartography, to spread open source tools that currently have greater importance in the technology industry and expand the OSM community.</p>
+
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class='pad2y'>
+    <div class='limiter'>
+      <div class='col12 quiet space-bottom1  keyline-top'>
+        <h3 class='col12 pad2y'>
+          Sunday, November 15th
+        </h3>
+      </div>
+      <div class='col12 pad1y'>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/mapbox-bengaluru/'>Mapbox Mapping Party - Bengaluru, India</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                10:00am - 5:00pm | Sunday
+              </span>
+              </div>
+
+              <p><p>
+                
+                  <img src="https://cloud.githubusercontent.com/assets/126868/11091931/6271d1d6-88a5-11e5-8b7a-0c4f5acf43da.png" style="height: 280px" align="center" />
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Mapbox will be hosting an OSM community mapping party to celebrate OpenStreetMap Geography Awareness Week on November 15, 2015 at their office in Bengaluru, India. Join us to hangout with mappers from the local OpenStreetMap community, learn new tools, hack on your ideas or try completing the map of the neighborhood with a field survey.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/mm-seattle/'>Missing Maps Anniversary Mapathon - Seattle, WA</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                12:00pm - 5:00pm | Sunday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Missing Maps is celebrating it’s one year anniversary this month. To date over 3,500 volunteers have attended map-a-thons (a mapping party) in one of 11 countries, collectively making 12 million map edits and putting 7.5 million people on the map. We can easily make a difference in another corner of the world from the comfort of our own home, school or workplace.  Join thousands of volunteers around the globe and leave your own mark on the map November 15th at the University Village Microsoft Store in Seattle, WA. Drop in anytime with your laptop between 12PM and 5PM to map for as long as you want. Red Cross volunteers will be on hand to get you started and show you how to map. In exchange for your participation, we’ll treat you with refreshments and swag!</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/uot-knox/'>University of Tennessee at Knoxville Mapathon - Knoxville, TN</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                7:00pm | Sunday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The University of Tennessee at Knoxville's School of Information Sciences student organizations are hosting a mapping event for current and former students and faculty. Contact <a href="htaylo11@vols.utk.edu">Taylor Hixson</a> for more details on joining the event.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/lima-peru/'>OSM Peru Mapathon - Callao, Lima, Peru</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                4:00pm | Sunday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Hola, con motivo de celebrarse a nivel mundial la OSMGeoWeek (Semana de Concienciación Geográfica – OpenStreetMap) conjuntamente con la <a href="http://wiki.openstreetmap.org/wiki/WikiProject_Peru">Comunidad peruana de OpenStreetMap</a> y con la colaboración de la <a href="http://municarmendelalegua.gob.pe/">Municipalidad de Carmen de la Legua – Reynoso</a>, nos encontramos organizando una “Mapping Raymi” (Jornada de Cartografía Social Libre y Colaborativa) en este distrito del Callao, con la finalidad de formar cartógrafos sociales y producir <a href="http://www.openstreetmap.org/#map=16/-12.0425/-77.0893">un mapa del distrito</a> colaborativo abierto y libre que pueda servir como insumo para la realización de diferentes proyectos por parte de las vecinas y vecinos.</p>
+
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class='pad2y'>
+    <div class='limiter'>
+      <div class='col12 quiet space-bottom1  keyline-top'>
+        <h3 class='col12 pad2y'>
+          Monday, November 16th
+        </h3>
+      </div>
+      <div class='col12 pad1y'>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/ati-kos3/'>ATI-KOS & University AAB Mapathon - Gjakova, Kosovo</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                1:00pm - 5:00pm | Monday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p><a href="www.ati-kos.com">ATI-KOS</a> in collaboration with <a href="www.aab-edu.net">University AAB</a> will celebrate Geography Awareness Week 2015 with a Mapathon on 16.Novembar.2015 1:00 - 5:00 (CET) at AAB premises in Gjakova, Kosovo.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/ithca/'>Ithaca Geoweek Mapping Party - Ithaca, NY</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                5:30pm - 8:00pm | Monday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Peace Corps / Cornell invites you to join us for a night of collaborative mapping and socializing to mark Geography Awareness Week 2015 at the Big Red Barn!The event is free, and snacks will be provided, but please bring a laptop, money for $1 beers, and create an account at www.openstreetmap.org before the event (optional).No mapping experience is necessary. There will be an OpenStreetMap crash course from 5:30 to 6, followed by open collaborative mapping from 6 to 8.
+Location: Big Red Barn (Cornell campus)</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/kinnaird-pk/'>Kinnaird College for Women University (KCWU) Mapathon - Lahore, Pakistan</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                2:30pm - 5:00pm | Monday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>MapGive Pakistan community is organizing a mapathon at Kinnaird College for Women University (KC) in Lahore, Pakistan. The mapathon is hosted in celebration of OpenStreetMaps Geo Awareness Week. The mapathon will help the students of KC learn the skill of digital mapping and how to map during a disaster. The training will broadly cover the topics like what is MapGive, what is OSM and HOT, how OSM works, how to map in OSM, and ultimately how to become a global digital humanitarian. Mappers will also map a few select disaster hit areas around the globe. These students will then become the members of the growing MapGive Pakistan community. The session will be organized from 2:30pm to 5pm on November 16, 2015 in Computer Lab at Kinnaird College for Women University.
+MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/manic-zambia/'>Manic Mapathon - Zambia</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                TBD | Monday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>More details to come.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/peace-corps-dc/'>Peace Corps Community Mapping Party - Washington, DC</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                6:30pm - 8:30pm | Monday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Peace Corps' Office of Innovation is hosting a mapping party for the Peace Corps Community. We're bringing together Returned Peace Corps Volunteers, staff and friends of Peace Corps to actively map for current Peace Corps field projects. This event is open to the public and virtual participants. Beginners welcome! Please register <a href="https://peacecorpsosmgeoweek.eventbrite.com">here</a>.</p>
+
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class='pad2y'>
+    <div class='limiter'>
+      <div class='col12 quiet space-bottom1  keyline-top'>
+        <h3 class='col12 pad2y'>
+          Tuesday, November 17th
+        </h3>
+      </div>
+      <div class='col12 pad1y'>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/bologna/'>DICAM - University of Bologna Mapathon  - Bologna, Italy</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                11:00am - 1:00pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>In the frame of Geography Awareness Week 2015, the Geomatics team of the Department of Civil, Chemical, Environmental, and Materials Engineering (DICAM) at University of Bologna is hosting this Mapathon for students and the larger community. The event is free, but you need to bring a laptop (a mouse is suggested). You can create an account at www.openstreetmap.org before the event. No mapping experience is necessary. <a href="http://www.engineeringarchitecture.unibo.it/en/school/campuses/bologna-campus">Location</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/lusaka-zam/'>OSM Zambia Mapathon - Lusaka, Zambia</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:00am - 1:00pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>OSM Zambia will be hosting a mapathon to celebrate OpenStreetMap Geography Awareness Week on November 16, 2015 in Lusaka, Zambia.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/ati-kos2/'>ATI-KOS & Bonevet Makerspace Mapathon - Gjakova, Kosovo</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                1:00pm - 5:00pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p><a href="www.ati-kos.com">ATI-KOS</a> in collaboration with <a href="www.bonevet.org">BONEVET Makerspace</a> will celebrate Geography Awareness Week 2015 with a Mapathon on 17 November 2015 1:00 - 5:00pm (CET) at BONEVET premises in Gjakova, Kosovo.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/geoweekmnl2015'>Map the Philippines and Mozilla Mapping Party - Makati, Philippines</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                01:00pm - 6:00pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The week of November 15-21 is Geography Awareness Week and to help celebrate, Map the Philippines and Mozilla Community Space Manila are hosting an OpenStreetMap GeoWeek mapping party on November 17 from 1-6pm.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/groningen/'>University of Groningen Mapathon - Groningen, Netherlands</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                5:00pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>A Missing Maps Event will be held in Groningen on the 10th of November, in collaboration with the Netherlands Red Cross, American Red Cross, OpenStreetMap Foundation, Geon B.V. and University of Groningen.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/bnu-pk/'>Beaconhouse National University (BNU) Mapathon - Lahore, Pakistan</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                2:30pm - 5:00pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>MapGive Pakistan community is organizing a mapathon at Beaconhouse National University (BNU) in Lahore, Pakistan. The mapathon is hosted in celebration of OpenStreetMaps Geo Awareness Week and is supported by the BNU Volunteer Society. The mapathon will help the students of BNU learn the skill of digital mapping and how to map during a disaster. The training will broadly cover the topics like what is MapGive, what is OSM and HOT, how OSM works, how to map in OSM, and ultimately how to become a global digital humanitarian. Mappers will also map a few select disaster hit areas. These students will then become the members of the growing MapGive Pakistan community. The session will be organized from 2:30pm to 5pm on November 17, 2015 in SCIT Computer Lab, Beaconhouse National University.
+MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/cartong/'>CartONG Mapathon - Chambery, France</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                6:00pm - 9:00pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>CartONG will be hosting a mapathon at Le Mug in Chambery, France to celebrate OpenStreetMap Geography Awareness Week on November 17, 2015. This mapathon is organized as part of the Semaine de la Solidarités Internationale.
+<a href="https://www.eventbrite.fr/e/billets-mapathon-missing-maps-chambery-19390103321">Registration</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/msf-newcastle/'>Missing Maps and Friends of MSF Newcastle Mapathon - Newcastle, England</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                6:00pm - 9:30pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Newcastle's first ever Mapathon will be hosted at Newcastle University Students' Union in association with MSF &amp; Missing Maps on Novemeber, 17 from 6:00 - 9:30pm.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/ho-ho-kus/'>Ho-Ho-Kus 8th Grade Mapathon - Ho-Ho-Kus, NJ</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:30am | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>In celebration of OSM GeoWeek, 8th graders at Ho-Ho-Kus Middle School will be participating in a Mapathon on Tuesday, November 17. Some of our 8th grade students are working with a Peace Corps volunteer in Senegal. Our map data will be used by the local health system to track incidence of malaria and to improve services for people living with HIV in the city.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/iug-norge/'>Engineers Without Borders Norway (IUG Norge) - Bergen, Norway</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                5:00pm - 7:00pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Mapathon hosted in the company Multiconsult's facilities at Nesttun outside of Bergen.
+Sign up <a href="http://www.iug.no/">here</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/temple/'>Temple University Mapathon - Philadelphia, PA</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                TBD | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Mapathon to be held at the Temple University in on November 17, 2015.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/dibrugarh/'>Dibrugarh University Mapathon - Dibrugarh, India</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:30am - 4:30pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Mapathon to be held at the Dibrugarh University in Dibrugarh, India on November 17, 2015 from 9:30am - 4:30pm.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/ucf/'>University of Central Florida Mapathon - Orlando, FL</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                3:30pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Mapathon to be held at the University of Central Florida in celebration of OpenStreetMap Geography Awareness Week on November 17, 2015 from 3:30-5:45pm.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/smu/'>Southern Methodist University Mapathon - Dallas, TX</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                11:00am | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Mapathon to be held at the Southern Methodist University in celebration of OpenStreetMap Geography Awareness Week on November 17, 2015 from 11:00am - 3:00pm.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/dean-ms/'>Alice Deal Middle School Mapathon - Washington, DC</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                4:30pm - 6:30pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p> The Alice Deal Middle School in Washington, DC invites the student body and parents to participate in their Mapathon for OpenStreetMap Geography Awareness Week.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/clark-u/'>Clark University Mapathon - Worcester, MA</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                12:00pm -  2:00pm | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p> The Clark University's GIS for Development and Environment Program will be hosting a mapathon for new and experienced mappers on Wednesday, November 17.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/missingmaps-london/'>Missing Maps and MSF UK - London, England</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                18:00 | Tuesday
+              </span>
+              </div>
+
+              <p><p>
+                
+                  <img src="http://wiki.openstreetmap.org/w/images/thumb/e/ea/Missing_Maps_London_Oct_2015.jpg/300px-Missing_Maps_London_Oct_2015.jpg" style="height: 280px" align="center" />
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>London has seen Missing Maps Project mapathons every month for the past year, and selling out the venues every time, so don't wait too long to get signed up for this special OSMgeoweek humanitarian mapping event hosted at the Médecins Sans Frontières offices. Bring a laptop and we'll show you how to map! <a href="https://www.eventbrite.co.uk/e/missing-maps-first-anniversary-mapathon-tickets-19474704365">Sign up on eventbrite</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class='pad2y'>
+    <div class='limiter'>
+      <div class='col12 quiet space-bottom1  keyline-top'>
+        <h3 class='col12 pad2y'>
+          Wednesday, November 18th
+        </h3>
+      </div>
+      <div class='col12 pad1y'>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/st-lawrence/'>Missing Maps St. Lawrence University Mapathon  - Canton, NY</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                11:30am - 1:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>St. Lawrence University along with Missing Maps will be hosting a mapathon in the GIS lab (Madill Hall 313) to celebrate OpenStreetMap Geography Awareness Week on November 18, 2015. This event is open to students, faculty, and staff. Cider and donuts provided, however the event is BYOD (Bring Your Own Device) - The Lab only has 15 computers and laptops work just as well!</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/rennes/'>Rennes 2 University Mapathon  - Rennes, France</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                5:30pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>ESIGAT will be hosting a mapathon at Rennes 2 University, France to celebrate OpenStreetMap Geography Awareness Week on November 18, 2015.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/kelaniya/'>Kelaniya Mapathon</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                8:30 AM - 1:00 PM | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The university of Kelaniya has organized a mapathon for Wednesday, November 18th. Students will help to map the area around their university and flood prone areas to the north in the Atanugal Oya river basin. Data from the latter will be used to model flood impacts and plan for flood reduction measures by the World Bank and the Sri Lankan government. Trainers from the World Bank and the Sri Lankan government will be on hand to answer questions and provide advice to the students</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/mali/'>GIS Day - Bamako, Mali</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                TDB | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The 18th of November we organize the first ever GIS day in Mali, set up in collaboration with the geography department of the university, UN OCHA, WFP, USAID, ACTED, BTC, ... and the local openstreetmap community. We'll have an exhibition stand to give a presentation on OSM.
+Première journée des SIG  au Mali
+À la faculté d’histoire et de géographie
+Conférence débat (GPS - OSM - sémiologie graphique)
+Exposition de produit, Projection vidéo, Formation</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/luc-dec/'>LUC and DEC Mapathon - London, England</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                5:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p><strong>(Event now full)</strong></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/fcc-pk/'>Forman Christian College (FCC) Mapathon - Lahore, Pakistan</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                10:00am - 12:30pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Description: MapGive Pakistan community is organizing a mapathon at Forman Christian College (FCC) in Lahore, Pakistan. The mapathon is hosted in celebration of OpenStreetMaps Geo Awareness Week. The mapathon will help the students learn the skill of digital mapping and how to map during a disaster. The training will broadly cover the topics like what is MapGive, what is OSM and HOT, how OSM works, how to map in OSM, and ultimately how to become a global digital humanitarian. Mappers will also map a few select disaster hit areas around the globe. These students will then become the members of the growing MapGive Pakistan community. The session will be organized from 10am to 12:30pm on Wednesday, November 18, 2015 at FCC.
+MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/wm/'>OpenStreetMap Mapathon at William & Mary - Williamsburg, VA</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                6:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+                  <img src="https://cloud.githubusercontent.com/assets/2665840/11095031/19c0c38c-8861-11e5-9ae9-5402a81be3e4.jpg" style="height: 280px" align="center" />
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Join us in our effort to provide data for the Afghanistan earthquake relief teams in our <a href="http://www.wm.edu/as/cga/GIS_Day_Folder/index.php">OpenStreetMap Mapathon!</a> This is meant to be a fun, social event, but for a good cause. Refreshments will be served, including pizza, and no previous GIS experience is required.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/umt-pk/'>University of Management & Technology (UMT) Mapathon - Lahore, Pakistan</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                2:30pm - 5:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>MapGive Pakistan community is organizing a mapathon at University of Management &amp; Technology (UMT) in Lahore, Pakistan. The mapathon is hosted in celebration of OpenStreetMaps Geo Awareness Week. The mapathon will help the students of UMT learn the skill of digital mapping and how to map during a disaster. The training will broadly cover the topics like what is MapGive, what is OSM and HOT, how OSM works, how to map in OSM, and ultimately how to become a global digital humanitarian. Mappers will also map a few select disaster hit areas around the globe. These students will then become the members of the growing MapGive Pakistan community. The session will be organized from 2:30pm to 5pm on November 18, 2015 in the Computer Lab at University of Management &amp; Technology.
+MapGive Pakistan on <a href="http://twitter.com/MapGivePakistan">Twitter</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/ucd-mmh/'>University of Colorado-Denver Mapathon - Denver, CO</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                6:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>University of Denver and the FOSS lab is hosting this mapathon for students and the larger community to learn about OSM.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/msf-nyc/'>Doctors Without Borders (MSF) Mapathon, New York, NY</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                4:00pm 6:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Doctors Without Borders (MSF) will host a mapathon to celebrate OpenStreetMap Geography Awareness Week on November 18, 2015 in New York City. <a href="https://www.eventbrite.com/e/missing-maps-event-registration-19388364119">RSVP</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/george-school/'>George Heriot School Mapathon - Edinburgh, Scotland</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                TBD | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The George Heriot School in Edinburgh, Scotland will hold a Mapathon to celebrate GIS Day for Geography Awareness Week on November 18, 2015.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/gis-or/'>GIS Day Mapathon - Portand Oregon</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                4:00pm - 6:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Mapathon to celebrate GIS Day for Geography Awareness Week on November 18, 2015 in Portland, Oregon. For more information look <a href="http://www.oregonmetro.gov/event/gis-day-mapathon/2015-11-18">here</a> and sign up <a href="https://oregonmetro.wufoo.com/forms/q1dhkdh115h92kx/">here</a>.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/msf-cork/'>UCC Friends of MSF Mapathon - Cork, Ireland</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                7:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>In celebration of OSM GeoWeek the UCC Friends of MSF will be hosting a mapathon in Cork, Ireland on November, 18 at 7:00pm.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/stanford/'>Stanford University Mapathon - Standford, CA</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                2:00pm -  4:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>As part of GISDay@Stanford, MaptimeSV will host a Mapathon at The Stanford Geospatial Center, Stanford University on November 18. Get more information or RSVP <a href="http://www.eventbrite.com/e/gisdaystanford-tickets-19264666135">here</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/mm-sfsu/'>Missing Maps OSM Mapathon at San Francisco State University - San Francisco, CA</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                5:30pm - 8:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>In celebration of GIS Day and National Open Street Map Geo Week, San Francisco State's Institute for Geographic Information Science (IGISc) will host a Missing Maps event. Our goal is to help map vulnerable places in the lesser developed world so that local and international NGOs, communities, and individuals can use the maps and the data to better respond to crises affecting these areas.
+Sign up <a href="https://www.eventbrite.com/e/missing-maps-open-street-mapathon-san-francisco-state-university-registration-18966812246">here</a>.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/bali-green-school/'>Green School Bali Mapathon with HOT - Ubud, Indonesia</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:00am - 12:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Mapathon to be held at the Hubud co-working space in Ubud, Bali by the Green School in collaboration with the Humanitarian OpenStreetMap Team (HOT). Mapping tasks will focus on Kalimantan to support the current wide-spread burning issues across the region. The event is part of the OSM Geo Awareness Week and will take place on 18th November, 2015 from 9:00am to 12:00pm.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/sipa-rpcv/'>Columbia University Returned Peace Corps Volunteers Mapathon - New York, NY</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                5:00pm - 7:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The Columbia University SIPA RPCV group will be holding a mapathon from 5:00 - 7:00pm on Wednesday, November 18 in New York, New York.  It will be located in Pupin, room 424.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/n-ireland/'>Land & Property Services Mapathon - Belfast, N. Ireland</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                12:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Mapathon for Land and Property Services staff and AGI members to celebrate OpenStreetMap Geography Awareness Week on November 18, 2015 in Belfast, Norther Ireland.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/umd/'>University of Maryland Mapathon - College Park, MD</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                3:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Missing Maps Mapathon to be held at LeFrak Hall and McKeldin Library at the University of Maryland, College Park on November 18, 2015.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/teachOSM/'>TeachOSM Mapathon - Washington, DC</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:00am - 4:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>This is a day-long mapathon held at the US Census Bureau to introduce OpenStreetMap and map selected areas of interest to the Bureau.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/colorado-state/'>Colorado State University Humanitarian Mapathon - Fort Collins, CO</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:00am - 5:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The Geospatial Centroid at Colorado State University (CSU) in Fort Collins, Colorado, is hosting a GIS Day celebration that will involve students, faculty, and business professionals in a variety of GIS-related events. The GIS Day celebration will take place on November 18th, 2015, from 9:00 am - 5:00 pm in the Morgan Library Event Hall at CSU. Included in the event will be a Poster Gallery to exhibit the breadth and depth of research and applications of geospatial technologies, Lunch Table Hosts to connect students with practitioners in the field, a variety of short presentations, as well as a keynote lecture on “Designing Useful and Usable GIS and Mapping Technologies.” The Mapathon will take place from 4:00 – 6:00 p.m. in the Ramskeller, located in the Lory Student Center on campus. The event is open to the public and attendees should bring their own laptop to participate. The focus of this mapathon will be to use OpenStreetMap to map priority areas in Senegal.</p>
+
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class='pad2y'>
+    <div class='limiter'>
+      <div class='col12 quiet space-bottom1  keyline-top'>
+        <h3 class='col12 pad2y'>
+          Thursday, November 19th
+        </h3>
+      </div>
+      <div class='col12 pad1y'>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/ug-it/'>University of Gothenburg Mapathon  - Gothenburg, Sweden</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                4:00pm - 6:00pm | Thursday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>In relation to the Geography Awareness Week 2015, the students from University of Gothenburg Applied IT department together with SKIP (The Association for Informatics and Programming) is hosting a short Mapathon at University of Gothenburg Campus Lindholmen for students with various professional backgrounds (from programming and IT to Geography and Environmental Sciences). The event is free, but you need to bring a laptop and a mouse as it will be more comfortable for you to work. You can create an account at www.openstreetmap.org before the event or you can do it together with others during an event and you will be guided through the short tutorials. No mapping, programming or development experience is needed. Just come and learn!</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/und/'>University of North Dakota Department of Geography and GIScience Mapathon  - Grand Forks, ND</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:30am | Thursday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p><a href="http://arts-sciences.und.edu/geography/_files/docs/mapathon_2015.pdf">FLYER</a>
+Join the University of North Dakota's Department of Geography and GIScience map vulnerable areas of the world. No experience required. Tutorials on getting started with mapping at these times: 9:30am, 11am, 12:30pm, 2pm, 3:30pm, 5pm, 6pm, 7pm, 8pm. For more information please visit <a href="http://arts-sciences.und.edu/geography/gaw.cfm">here</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/maptime-boulder/'>Maptime Boulder - Boulder, CO</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                6:30pm | Thursday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Full info and <a href="http://www.meetup.com/Maptime-Boulder/events/226410045/">RSVP</a>
+This meeting we'll celebrate GIS Day by learning humanitarian mapping using the OpenStreetMap (OSM) platform. OSM is a global volunteer-led effort to produce a free and open map of the world. In recent years it has been used to create maps in support a number of major disaster response efforts. We will be mapping in support of the Humanitarian OpenStreetMap Team (HOT), a non-profit organization that "applies the principles of open source and open data sharing for humanitarian response and economic development." This event is being sponsored by the Department of Geography at CU Boulder. Beginners and experts alike are welcome. Please bring a laptop</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/malabe/'>SLIIT Mapathon</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                10:00 AM - 4:30 PM | Thursday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The Sri Lankan Institute of Information Technology (SLIIT) has organized a Mapathon for Thursday, November 19th. Students will help to map the area around their university.  They will be introduced to mapping flood prone areas to the north in the Attanagalu Oya river basin also. Data from the latter will be used to model flood impacts and plan for flood reduction measures by the World Bank and the Sri Lankan government. Trainers from the World Bank will be on hand to answer questions and provide advice to the students.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/geo-2050/'>Geography 2050 - New York, NY</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                4:30pm - 5:30pm | Thursday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p><a href="http://www.geography2050.org/">Geography 2050</a> is the fall symposium of the American Geographical Society. The theme is "Exploring Our Future in an Urbanized World".</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/ggas/'>Graduate Geography Student Association (GGSA) Mapathon - Buffalo, NY</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                6:00pm | Thursday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Graduate Geography Student Association (GGSA) will be hosting a mapathon to celebrate OpenStreetMap Geography Awareness Week on November 19, 2015 in Buffalo, NY.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/geotec-uji/'>GEOTEC - UJI Mapathon - Castellon, Spain</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                10:00am - 1:00pm | Thursday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>GEOTEC and UJI will be hosting a mapathon in Castellon, Spain on November 19 from 10:00am to 1:00pm.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/osm-institutions/'>Access for All: OSM GeoWeek 2015</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                6:30pm - 9:00pm | Thursday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Please join us for a mapping party to celebrate OpenStreetMap(OSM) Geography Awareness Week 2015! OSM GeoWeek is a global series of events to highlight OSM and the importance of geographic education, and we want to celebrate with you. The purpose of this event is to actively contribute to OpenStreetMap (we'll have a training for beginners), but we'll also hear keynote addresses on the importance of open geographic data from top government and institutional leaders and lightning talks on how OSM data is used in humanitarian situations from a variety of OSM community members.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/ue-geog/'>University of Exeter Mapathon - Exeter, England</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                6:00pm - 8:00pm | Thursday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>University of Exeter Geography Department will be holding a mapathon in celebration of OpenStreetMap Geography Awareness Week on Wednesday, November 18.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/polimi/'>Politecnico di Milano Mapathon - Milano, Italy</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                2:15pm | Thursday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The GEOlab (Geomatics and Earth Observation laboratory) of Politecnico di Milano is hosting this mapathon in the frame of the OpenStreetMap Geography Awareness Week. During the mapathon in Milan the staff of GEOlab will introduce the OSM project and train the participants on how to get started on mapping. The focus will be placed on geographical areas and mapping tasks proposed by the HOT and the Missing Maps project. During the mapathon two senior members of HOT will be reached through a Skype call.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/sao-paulo/'>University of São Paulo Mapathon - São Carlos, Brazil</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                6:00pm | Thursday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>More details to come.</p>
+
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class='pad2y'>
+    <div class='limiter'>
+      <div class='col12 quiet space-bottom1  keyline-top'>
+        <h3 class='col12 pad2y'>
+          Friday, November 20th
+        </h3>
+      </div>
+      <div class='col12 pad1y'>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/mary-washington/'>Map-A-Palooza II -  Fredericksburg, VA</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                4:00pm - 8:00pm | Friday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The Geography Department at the University of Mary Washington will be holding another Map-A-Palooza to celebrate OpenStreetMap Geography Awareness Week on Novemember 20, 2015 from 4:00 - 8:00 PM.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/busitema-uni/'>Busitema University Mapathon - Busitema, Uganda</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                2:00pm - 6:00pm | Friday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Busitema University Mapping Club will be hosting a members mapathon in celebration of OSM GeoWeek on November, 20 2015.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/goedesy-zagreb/'>Field Paper Pub Crawl - Zagreb, Croatia</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                8:00pm | Friday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>We are organising a Mapping Pub Crawl using Field Papers on Friday the 20th of November, starting at 8PM. Every participant will get a printed atlas from Field Papers (Zagreb area) and visit 4 pubs using different routes and taking notes on the atlas, and at the end of the night atlantes will be collected by the organisers and then uploaded on Field Papers.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/kll-geocache/'>Kathmandu Living Labs OSM Geocaching - Kathmandu, Nepal</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:00am - 1:00pm | Friday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Global Shapers Kathmandu are organizing South Asia shape 2015 event in which Kathmandu Living Labs will host 20 participants from South Asia and teach them about the use of mapping technology to build sustainable cities. KLL will organize a geo-caching event where participants will use OpenStreetMap to navigate and collect information about the features while solving clues. This is a closed event.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/ati-kos/'>ATI-KOS Mapathon - Pristina, Kosovo</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                1:00pm - 5:00pm | Wednesday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p><a href="www.ati-kos.com">ATI-KOS</a> in collaboration with University for Business and Technology <a href="www.ubt-uni.net">UBT</a> will celebrate Geography Awareness Week 2015 and GIS Day with a Mapathon on 18.Novembar.2015 1:00pm - 5:00pm at UBT premises in Pristina, Kosovo.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/hms-gwu/'>GW Humanitarian Mapping Society Mapathon - Washington, DC</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                5:00pm | Friday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The Humanitarian Mapping Society at The George Washington University will be holding a Mapathon to celebrate OpenStreetMap Geography Awareness Week on Novemember 20, 2015 from 5:00 - 9:00 PM.
+<a href="http://goo.gl/forms/jPlnWHwx26">RSVP</a> Note: T-Shirt sales are for HMS members only.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/uganda-wairaka/'>Mapping day Uganda - Wairaka, Uganda</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                12:00pm - 5:00pm | Friday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>We are mappers that love the experience of mapping, having interacted with @mapuganda we would wish to introduce new members, to use new OSM tools and edit the OpenStreetMap.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/kampala/'>Mapathon - Kampala, Uganda</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:00am - 4:00pm | Friday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>More preparations such as training materials to be used, focus area in Kampala, specific time, hashtag to be used, organizations(s) to be involved, etc will be communicated through twitter "@mapuganda"</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/george-mason/'>George Mason University - Fairfax, VA</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                4:00pm - 8:00pm | Friday
+              </span>
+              </div>
+
+              <p><p>
+                
+                  <img src="https://cloud.githubusercontent.com/assets/2665840/10998311/40b2053a-8462-11e5-9bce-4c7163ff6a43.png" style="height: 280px" align="center" />
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>On Friday, November 20th, George Mason University’s Geography and Geoinformation Department will host a Mapathon where mappers will choose from various impactful mapping projects that create open data to help the humanitarian and development community. We will be able to share the work we accomplish and look at each other’s mapping contribution. The mapping events are supported by Missing Maps, NOVA Community College ASPRS club, George Mason University ASPRS club, Peace Corps, National Geographic, and MapGive.</p>
+
+<p>Come show your Patriot Pride from 4:00 pm to 8:00 pm in Exploratory Hall, 2301 (Open Area). Tickets are free and are available <a href="https://www.eventbrite.com/e/george-mason-university-mapathon-tickets-19043886778">here</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class='pad2y'>
+    <div class='limiter'>
+      <div class='col12 quiet space-bottom1  keyline-top'>
+        <h3 class='col12 pad2y'>
+          Saturday, November 21st
+        </h3>
+      </div>
+      <div class='col12 pad1y'>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/mexico/'>OSMGeoWeek en México</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                3:00pm | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>La comunidad de OpenStreetMap México estará trabajando durante OSMGeoWeek en 3 tareas:
+1) Adoptando una localidad que esté poco mapeada (ve la lista en el enlace al final)
+2) Terminando la tarea HOT 1258 de Huracán Patricia
+3) Sumándose a la comunidad de Veracruz para mapear la región</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/wikimedia/'>Wikimedia Italia OSM Event  - Bologna, Italy</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                10:00am | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Wikimedia Italia is hosting the annual Italian OSM users event in Bologna, Italy on Saturday, November 21 and Sunday, November 22. For more information please visit <a href="https://wiki.openstreetmap.org/wiki/2015_Novembre_OpenStreetMap_Bologna">here</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/geoinquietos/'>Geoinquietos Madrid Mapathon - Madrid, Spain</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                11:00am | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>To celebrate OSMGeoWeek 2015 Geoinquietos Madrid invite you to participate in a Mapathon held in MediaLab Prado. For registration and more details visit the <a href="http://www.meetup.com/es/Geoinquietos-MAD/events/226255562/">Meetup page</a>
+Con motivo del OSMGeoWeek 2015  Geoinquietos Madrid está preparando un Mapatón en MediaLab Prado. Mas detalles en la página de <a href="http://www.meetup.com/es/Geoinquietos-MAD/events/226255562/">Meetup</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/jomo-kenya/'>Jomo Kenyatta University of Agriculture and Technology Mapathon - Juja, Kenya</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                TBD | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Jomo Kenyatta University of Agriculture and Technology will be hosting a mapathon to celebrate OpenStreetMap Geography Awareness Week on November 21, 2015 in Juja, Kenya.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/cidst-mad/'>OSM Madagascar Mapathon - Antananarivo, Madagascar</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:00am - 12:00pm | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>OSM Madagascar will be hosting a mapathon to celebrate OpenStreetMap Geography Awareness Week in the training room on November 21, 2015 at CIDST Tsimbazaza, Antananarivo, Madagascar. They will work on a task that is to be created.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/chicago/'>Missing Maps Chicago Mapathon - Chicago, IL</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:30am - 2:30pm | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Missing Maps/American red Cross of Chicago and Norther Illinois will be hosting a mapathon to celebrate OpenStreetMap Geography Awareness Week on November 21, 2015 in Chicago, IL.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/jakarta/'>Rinjani Volcano Mapathon, OpenStreetMap Indonesia - Jakarta, Indonesia</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                1:00pm - 3:00pm | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>There will be a mapathon hosted in Jakarta, Indonesia on November 21st from 1:00 - 3:00pm to map the Rinjani Volcano region. Volcano Rinjani is a massive active volcano which towers over the island of Lombok in Indonesia. Volcano Rinjani is the second highest mountain in Indonesia at 3,726 meters tall. On October 28, 2015 the Gunung Barujari cone of the volcano erupted. The status of Volcano Rinjani is still a Level II (Alert). This volcano is located in densely populated area and therefore in need of mapping.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/girl-scouts/'>Girls Scouts and Peace Corps Mapathon - Washington, DC</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                11:00am - 1:00pm | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>Peace Corps and the George Washington University Geography Department will host Girl Scouts Gold Awardees for an OSM mapping party. Girl Scouts will receive an OSM training and actively map for Peace Corps projects while learning about OSM in public policy and careers in tech and GIS.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/osm-brasilia/'>OSM Brasilia Mapathon - Brasilia, Brazil</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                4:00pm | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>OpenStreetMap Brasilia will be hosting a Mapathon at Calango Hacker Club on Novemember 21, 2015 at 4:00PM. For more information look <a href="http://www.openstreetmap.org/user/wille/diary/36274">here</a></p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/uganda-jinja/'>Mapping Day Uganda - BIT MAK Jinja, Uganda</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                9:00am - 5:00pm | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>We are a group of students at Makerere University Jinja Campus who participated in the mapping events with @mapuganda and would like to teach OSM to new members, and also do mapping of places in Jinja that are not mapped: to improve the online OSM map.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/cotonou/'>Communauté OpenStreeMap Benin - Cotonou, Benin</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                 | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>OSM Benin is one of the active communities in the West African region that creates humanitarian data.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/dar-es-salaam/'>HOT Mapathon - Dar es Salaam, Tanzania</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                 | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>The OSM community in Dar es Salaam Tanzania would like to be part of all the mapathons that will be happening all over the world by organising an event in Dar es Salaam.</p>
+
+              </div>
+            </div>
+          </div>
+        
+          <div class='col12 pad1y clearfix '>
+            <div>
+              <div class='headline clearfix space-bottom1'>
+                <h2><a href='/event/duitama/'>Colegio Salesiano de Duitama - Duitama, Colombia</a></h2>
+                <span class='text-right quiet'></span>
+                <span class='strong'>
+                 | Saturday
+              </span>
+              </div>
+
+              <p><p>
+                
+              <p>
+
+              <div class='prose schedule'>
+                <p>More details to come.</p>
+
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+
+</div>
+
+  
+
+
+
+<div class='pad2x show-mobile'>
+  <a href='#sponsors' class='button block'>Supporters</a>
+</div>
+
+
+<section id='sponsors' class='hide-mobile col12 center fill-light pad2y'>
+  <div class='limiter clearfix'>
+    <div class='col10 margin1'>
+      <h2 class='space-bottom1'>Participating Groups</h2>
+
+      <!--
+      <nav class='space-bottom2'>
+        <a href='http://www.nationalgeographic.com/' class='sponsor natgeo'>National Geographic</a>
+      </nav>
+      -->
+      <nav class='space-bottom2'>
+        <a href='http://openstreetmap.us/' class='sponsor osmus'>OpenStreetMap US</a>
+        <a href='http://mapgive.state.gov/' class='sponsor mapgive'>MapGive</a>
+        <a href='http://hot.openstreetmap.org/' class='sponsor hot'>HOT</a>
+        <a href='http://www.missingmaps.org/' class='sponsor missingmaps'>Missing Maps</a>
+        <!--<a href='https://www.usaid.gov/GlobalDevLab' class='sponsor usaid'>USAID GeoCenter</a>-->
+	      <a href='https://www.usaid.gov/GlobalDevLab' >
+	         <img src="/img/logos/usaid.png" style="height:105px;">
+	      </a>
+        <a href='http://www.nationalgeographic.com/' class='sponsor natgeo'>National Geographic</a>
+        <a href='http://www.peacecorps.gov/' >
+	        <img src="/img/logos/peace-corps.png" style="height:105px;">
+	      </a>
+        <a href='https://www.gfdrr.org/' >
+	        <img src="/img/logos/gfdrr.png" style="height:105px;">
+	      </a>
+        <a href='http://www.aag.org/' >
+	        <img src="/img/logos/aag.png" style="height:105px;">
+	      </a>
+        <a href='http://eca.state.gov/programs-initiatives/international-education-week' >
+	        <img src="/img/logos/iew_blue_logo_0.jpg" style="height:105px;">
+	      </a>
+        <a href='http://www.ncge.org/' >
+	        <img src="/img/logos/ncge.png" style="height:105px;">
+	      </a>
+        <a href='http://kathmandulivinglabs.org/' class='sponsor kll'>Kathmandu Living Labs</a>
+        <a href='http://americangeo.org/' >
+          <img src="/img/logos/ags.jpg" style="height:105px;">
+        </a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<section class='fill-white pad2y center'>
+  <div class='limiter'>
+    <p><strong>Interested in participating?</strong> Email <a href='mailto:mapgive@state.gov'>mapgive@state.gov</a> to learn more.</p>
+  </div>
+</section>
+<footer class='col12 center fill-dark dark'>
+  <div class='pad2y col12'>
+    <div class='limiter'>
+      <p class='small hide-mobile'>
+        <a href='http://osmgeoweek.org'>Geography Awareness Week - OpenStreetMap</a> | <a href='https://twitter.com/search?q=%23osmgeoweek&src=typd'>#osmgeoweek</a> | Photo credits: USAID, 596 acres, UCSB, Kerri Lee Smith, Peace Corps The Gambia, Becky Carnes | Logo credits: Andrew Rasner, Taylor Hixson
+<!-- https://www.flickr.com/photos/usaid_images/11712673254/ -->
+<!-- http://596acres.org/en/ -->
+<!-- http://helios.geog.ucsb.edu/events/department-news/963/ucsb-geography-promotes-the-adventure-in-your-community-for-geography-awareness-week/ -->
+<!-- https://www.flickr.com/photos/77654185@N07/8082899697 -->
+      </p>
+      <a href='https://twitter.com/search?q=%23osmgeoweek&src=typd' class='show-mobile small dark'>#osmgeoweek</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

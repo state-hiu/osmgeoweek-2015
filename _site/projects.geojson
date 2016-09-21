@@ -1,0 +1,379 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    
+     
+      
+      {
+      "type": "Feature",
+      "properties": {
+        "title": "Open Data for Resilience",
+        "url": "/project/Atanagalu"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates":[
+          [
+            [
+              -17.830006,
+              36.841069
+            ],
+            [
+              -17.830006,
+              36.841069
+            ],
+            [
+              -17.831474,
+              36.841069
+            ],
+            [
+              -17.831474,
+              36.942695
+            ],
+            [
+              -17.830006,
+              36.942695
+            ]
+          ]
+        ]
+      }
+    }
+    
+     
+      
+      ,{
+      "type": "Feature",
+      "properties": {
+        "title": "Quelimane, Mozambique",
+        "url": "/project/Quelimane"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates":[
+          [
+            [
+              -17.830006,
+              36.841069
+            ],
+            [
+              -17.830006,
+              36.841069
+            ],
+            [
+              -17.831474,
+              36.841069
+            ],
+            [
+              -17.831474,
+              36.942695
+            ],
+            [
+              -17.830006,
+              36.942695
+            ]
+          ]
+        ]
+      }
+    }
+    
+     
+      
+      ,{
+      "type": "Feature",
+      "properties": {
+        "title": "Nyamira, Kenya",
+        "url": "/project/nyamira"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates":[
+          [
+            [
+              35.0938,
+              -0.90333
+            ],
+            [
+              35.0938,
+              -0.90333
+            ],
+            [
+              34.7704,
+              -0.90333
+            ],
+            [
+              34.7704,
+              -0.4023
+            ],
+            [
+              35.0938,
+              -0.4023
+            ]
+          ]
+        ]
+      }
+    }
+    
+     
+     
+     
+      
+      ,{
+      "type": "Feature",
+      "properties": {
+        "title": "Missing Maps – American Red Cross/ Kenya Red Cross",
+        "url": "/project/machakos"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates":[
+          [
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.264484
+            ],
+            [
+              -3.622438,
+              128.264484
+            ]
+          ]
+        ]
+      }
+    }
+    
+     
+      
+      ,{
+      "type": "Feature",
+      "properties": {
+        "title": "Ambon City, Indonesia",
+        "url": "/project/ambon"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates":[
+          [
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.264484
+            ],
+            [
+              -3.622438,
+              128.264484
+            ]
+          ]
+        ]
+      }
+    }
+    
+     
+      
+      ,{
+      "type": "Feature",
+      "properties": {
+        "title": "Missing Maps - American Red Cross/Haitian Red Cross",
+        "url": "/project/canaan-haiti"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates":[
+          [
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.264484
+            ],
+            [
+              -3.622438,
+              128.264484
+            ]
+          ]
+        ]
+      }
+    }
+    
+     
+      
+      ,{
+      "type": "Feature",
+      "properties": {
+        "title": "Missing Maps - Red Cross Partners",
+        "url": "/project/cape-town"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates":[
+          [
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.264484
+            ],
+            [
+              -3.622438,
+              128.264484
+            ]
+          ]
+        ]
+      }
+    }
+    
+     
+     
+      
+      ,{
+      "type": "Feature",
+      "properties": {
+        "title": "Missing Maps - Médecins Sans Frontières (MSF)",
+        "url": "/project/south-kivu"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates":[
+          [
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.264484
+            ],
+            [
+              -3.622438,
+              128.264484
+            ]
+          ]
+        ]
+      }
+    }
+    
+     
+      
+      ,{
+      "type": "Feature",
+      "properties": {
+        "title": "Missing Maps - Médecins Sans Frontières (MSF)",
+        "url": "/project/msf-sudan"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates":[
+          [
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.264484
+            ],
+            [
+              -3.622438,
+              128.264484
+            ]
+          ]
+        ]
+      }
+    }
+    
+     
+      
+      ,{
+      "type": "Feature",
+      "properties": {
+        "title": "Missing Maps – Médecins Sans Frontières (MSF)",
+        "url": "/project/lubumbashi"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates":[
+          [
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.622438,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.05791
+            ],
+            [
+              -3.737522,
+              128.264484
+            ],
+            [
+              -3.622438,
+              128.264484
+            ]
+          ]
+        ]
+      }
+    }
+    
+  ]
+}
