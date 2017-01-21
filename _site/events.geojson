@@ -6,7 +6,7 @@
       "type": "Feature",
       "properties": {
         "title": "OSM Mapathon Helsinki - Helsinki, Finland",
-        "url": "/event/helsinki/",
+        "url": "http://localhost:4000/event/helsinki/",
         
          "marker-color": "#4747A3"
         
@@ -22,7 +22,7 @@
       "type": "Feature",
       "properties": {
         "title": "OSMGeoWeek en México",
-        "url": "/event/mexico/",
+        "url": "http://localhost:4000/event/mexico/",
         
          "marker-color": "#4747A3"
         
@@ -38,7 +38,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps St. Lawrence University Mapathon  - Canton, NY",
-        "url": "/event/st-lawrence/",
+        "url": "http://localhost:4000/event/st-lawrence/",
         
          "marker-color": "#4747A3"
         
@@ -54,7 +54,7 @@
       "type": "Feature",
       "properties": {
         "title": "Rennes 2 University Mapathon  - Rennes, France",
-        "url": "/event/rennes/",
+        "url": "http://localhost:4000/event/rennes/",
         
          "marker-color": "#4747A3"
         
@@ -70,7 +70,7 @@
       "type": "Feature",
       "properties": {
         "title": "University of Gothenburg Mapathon  - Gothenburg, Sweden",
-        "url": "/event/ug-it/",
+        "url": "http://localhost:4000/event/ug-it/",
         
          "marker-color": "#4747A3"
         
@@ -86,7 +86,7 @@
       "type": "Feature",
       "properties": {
         "title": "University of North Dakota Department of Geography and GIScience Mapathon  - Grand Forks, ND",
-        "url": "/event/und/",
+        "url": "http://localhost:4000/event/und/",
         
          "marker-color": "#4747A3"
         
@@ -102,7 +102,7 @@
       "type": "Feature",
       "properties": {
         "title": "Wikimedia Italia OSM Event  - Bologna, Italy",
-        "url": "/event/wikimedia/",
+        "url": "http://localhost:4000/event/wikimedia/",
         
          "marker-color": "#4747A3"
         
@@ -118,7 +118,7 @@
       "type": "Feature",
       "properties": {
         "title": "Kelaniya Mapathon",
-        "url": "/event/kelaniya/",
+        "url": "http://localhost:4000/event/kelaniya/",
         
          "marker-color": "#4747A3"
         
@@ -134,7 +134,7 @@
       "type": "Feature",
       "properties": {
         "title": "Map-A-Palooza II -  Fredericksburg, VA",
-        "url": "/event/mary-washington/",
+        "url": "http://localhost:4000/event/mary-washington/",
         
          "marker-color": "#4747A3"
         
@@ -150,7 +150,7 @@
       "type": "Feature",
       "properties": {
         "title": "DICAM - University of Bologna Mapathon  - Bologna, Italy",
-        "url": "/event/bologna/",
+        "url": "http://localhost:4000/event/bologna/",
         
          "marker-color": "#4747A3"
         
@@ -166,7 +166,7 @@
       "type": "Feature",
       "properties": {
         "title": "Maptime Boulder - Boulder, CO",
-        "url": "/event/maptime-boulder/",
+        "url": "http://localhost:4000/event/maptime-boulder/",
         
          "marker-color": "#4747A3"
         
@@ -182,7 +182,7 @@
       "type": "Feature",
       "properties": {
         "title": "Busitema University Mapathon - Busitema, Uganda",
-        "url": "/event/busitema-uni/",
+        "url": "http://localhost:4000/event/busitema-uni/",
         
          "marker-color": "#4747A3"
         
@@ -198,7 +198,7 @@
       "type": "Feature",
       "properties": {
         "title": "GIS Day - Bamako, Mali",
-        "url": "/event/mali/",
+        "url": "http://localhost:4000/event/mali/",
         
          "marker-color": "#4747A3"
         
@@ -214,7 +214,7 @@
       "type": "Feature",
       "properties": {
         "title": "SLIIT Mapathon",
-        "url": "/event/malabe/",
+        "url": "http://localhost:4000/event/malabe/",
         
          "marker-color": "#4747A3"
         
@@ -230,7 +230,7 @@
       "type": "Feature",
       "properties": {
         "title": "OSM Peru Mapathon - Callao, Lima, Peru",
-        "url": "/event/osm-peru/",
+        "url": "http://localhost:4000/event/osm-peru/",
         
          "marker-color": "#4747A3"
         
@@ -246,7 +246,7 @@
       "type": "Feature",
       "properties": {
         "title": "LUC and DEC Mapathon - London, England",
-        "url": "/event/luc-dec/",
+        "url": "http://localhost:4000/event/luc-dec/",
         
          "marker-color": "#4747A3"
         
@@ -262,7 +262,7 @@
       "type": "Feature",
       "properties": {
         "title": "OSM Zambia Mapathon - Lusaka, Zambia",
-        "url": "/event/lusaka-zam/",
+        "url": "http://localhost:4000/event/lusaka-zam/",
         
          "marker-color": "#4747A3"
         
@@ -278,7 +278,7 @@
       "type": "Feature",
       "properties": {
         "title": "Forman Christian College (FCC) Mapathon - Lahore, Pakistan",
-        "url": "/event/fcc-pk/",
+        "url": "http://localhost:4000/event/fcc-pk/",
         
          "marker-color": "#4747A3"
         
@@ -294,7 +294,7 @@
       "type": "Feature",
       "properties": {
         "title": "Field Paper Pub Crawl - Zagreb, Croatia",
-        "url": "/event/goedesy-zagreb/",
+        "url": "http://localhost:4000/event/goedesy-zagreb/",
         
          "marker-color": "#4747A3"
         
@@ -310,7 +310,7 @@
       "type": "Feature",
       "properties": {
         "title": "ATI-KOS & University AAB Mapathon - Gjakova, Kosovo",
-        "url": "/event/ati-kos3/",
+        "url": "http://localhost:4000/event/ati-kos3/",
         
          "marker-color": "#4747A3"
         
@@ -326,7 +326,7 @@
       "type": "Feature",
       "properties": {
         "title": "ATI-KOS & Bonevet Makerspace Mapathon - Gjakova, Kosovo",
-        "url": "/event/ati-kos2/",
+        "url": "http://localhost:4000/event/ati-kos2/",
         
          "marker-color": "#4747A3"
         
@@ -342,7 +342,7 @@
       "type": "Feature",
       "properties": {
         "title": "Geography 2050 - New York, NY",
-        "url": "/event/geo-2050/",
+        "url": "http://localhost:4000/event/geo-2050/",
         
          "marker-color": "#4747A3"
         
@@ -358,7 +358,7 @@
       "type": "Feature",
       "properties": {
         "title": "OpenStreetMap Mapathon at William & Mary - Williamsburg, VA",
-        "url": "/event/wm/",
+        "url": "http://localhost:4000/event/wm/",
         
          "marker-color": "#4747A3"
         
@@ -374,7 +374,7 @@
       "type": "Feature",
       "properties": {
         "title": "Map the Philippines and Mozilla Mapping Party - Makati, Philippines",
-        "url": "/event/geoweekmnl2015",
+        "url": "http://localhost:4000/event/geoweekmnl2015",
         
          "marker-color": "#4747A3"
         
@@ -390,7 +390,7 @@
       "type": "Feature",
       "properties": {
         "title": "Ithaca Geoweek Mapping Party - Ithaca, NY",
-        "url": "/event/ithca/",
+        "url": "http://localhost:4000/event/ithca/",
         
          "marker-color": "#4747A3"
         
@@ -406,7 +406,7 @@
       "type": "Feature",
       "properties": {
         "title": "University of Management & Technology (UMT) Mapathon - Lahore, Pakistan",
-        "url": "/event/umt-pk/",
+        "url": "http://localhost:4000/event/umt-pk/",
         
          "marker-color": "#4747A3"
         
@@ -422,7 +422,7 @@
       "type": "Feature",
       "properties": {
         "title": "Kathmandu Living Labs OSM Geocaching - Kathmandu, Nepal",
-        "url": "/event/kll-geocache/",
+        "url": "http://localhost:4000/event/kll-geocache/",
         
          "marker-color": "#4747A3"
         
@@ -438,7 +438,7 @@
       "type": "Feature",
       "properties": {
         "title": "Kinnaird College for Women University (KCWU) Mapathon - Lahore, Pakistan",
-        "url": "/event/kinnaird-pk/",
+        "url": "http://localhost:4000/event/kinnaird-pk/",
         
          "marker-color": "#4747A3"
         
@@ -454,7 +454,7 @@
       "type": "Feature",
       "properties": {
         "title": "University of Groningen Mapathon - Groningen, Netherlands",
-        "url": "/event/groningen/",
+        "url": "http://localhost:4000/event/groningen/",
         
          "marker-color": "#4747A3"
         
@@ -470,7 +470,7 @@
       "type": "Feature",
       "properties": {
         "title": "Mapbox Mapping Party - Bengaluru, India",
-        "url": "/event/mapbox-bengaluru/",
+        "url": "http://localhost:4000/event/mapbox-bengaluru/",
         
          "marker-color": "#4747A3"
         
@@ -486,7 +486,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps Anniversary Mapathon - Seattle, WA",
-        "url": "/event/mm-seattle/",
+        "url": "http://localhost:4000/event/mm-seattle/",
         
          "marker-color": "#4747A3"
         
@@ -502,7 +502,7 @@
       "type": "Feature",
       "properties": {
         "title": "University of Tennessee at Knoxville Mapathon - Knoxville, TN",
-        "url": "/event/uot-knox/",
+        "url": "http://localhost:4000/event/uot-knox/",
         
          "marker-color": "#4747A3"
         
@@ -518,7 +518,7 @@
       "type": "Feature",
       "properties": {
         "title": "Geoinquietos Madrid Mapathon - Madrid, Spain",
-        "url": "/event/geoinquietos/",
+        "url": "http://localhost:4000/event/geoinquietos/",
         
          "marker-color": "#4747A3"
         
@@ -534,7 +534,7 @@
       "type": "Feature",
       "properties": {
         "title": "Jomo Kenyatta University of Agriculture and Technology Mapathon - Juja, Kenya",
-        "url": "/event/jomo-kenya/",
+        "url": "http://localhost:4000/event/jomo-kenya/",
         
          "marker-color": "#4747A3"
         
@@ -550,7 +550,7 @@
       "type": "Feature",
       "properties": {
         "title": "OSM Madagascar Mapathon - Antananarivo, Madagascar",
-        "url": "/event/cidst-mad/",
+        "url": "http://localhost:4000/event/cidst-mad/",
         
          "marker-color": "#4747A3"
         
@@ -566,7 +566,7 @@
       "type": "Feature",
       "properties": {
         "title": "University of Colorado-Denver Mapathon - Denver, CO",
-        "url": "/event/ucd-mmh/",
+        "url": "http://localhost:4000/event/ucd-mmh/",
         
          "marker-color": "#4747A3"
         
@@ -582,7 +582,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps Chicago Mapathon - Chicago, IL",
-        "url": "/event/chicago/",
+        "url": "http://localhost:4000/event/chicago/",
         
          "marker-color": "#4747A3"
         
@@ -598,7 +598,7 @@
       "type": "Feature",
       "properties": {
         "title": "Beaconhouse National University (BNU) Mapathon - Lahore, Pakistan",
-        "url": "/event/bnu-pk/",
+        "url": "http://localhost:4000/event/bnu-pk/",
         
          "marker-color": "#4747A3"
         
@@ -614,7 +614,7 @@
       "type": "Feature",
       "properties": {
         "title": "Graduate Geography Student Association (GGSA) Mapathon - Buffalo, NY",
-        "url": "/event/ggas/",
+        "url": "http://localhost:4000/event/ggas/",
         
          "marker-color": "#4747A3"
         
@@ -630,7 +630,7 @@
       "type": "Feature",
       "properties": {
         "title": "Manic Mapathon - Zambia",
-        "url": "/event/manic-zambia/",
+        "url": "http://localhost:4000/event/manic-zambia/",
         
          "marker-color": "#4747A3"
         
@@ -646,7 +646,7 @@
       "type": "Feature",
       "properties": {
         "title": "Doctors Without Borders (MSF) Mapathon, New York, NY",
-        "url": "/event/msf-nyc/",
+        "url": "http://localhost:4000/event/msf-nyc/",
         
          "marker-color": "#4747A3"
         
@@ -662,7 +662,7 @@
       "type": "Feature",
       "properties": {
         "title": "George Heriot School Mapathon - Edinburgh, Scotland",
-        "url": "/event/george-school/",
+        "url": "http://localhost:4000/event/george-school/",
         
          "marker-color": "#4747A3"
         
@@ -678,7 +678,7 @@
       "type": "Feature",
       "properties": {
         "title": "GIS Day Mapathon - Portand Oregon",
-        "url": "/event/gis-or/",
+        "url": "http://localhost:4000/event/gis-or/",
         
          "marker-color": "#4747A3"
         
@@ -694,7 +694,7 @@
       "type": "Feature",
       "properties": {
         "title": "CartONG Mapathon - Chambery, France",
-        "url": "/event/cartong/",
+        "url": "http://localhost:4000/event/cartong/",
         
          "marker-color": "#4747A3"
         
@@ -710,7 +710,7 @@
       "type": "Feature",
       "properties": {
         "title": "OSM Peru Mapathon - Callao, Lima, Peru",
-        "url": "/event/lima-peru/",
+        "url": "http://localhost:4000/event/lima-peru/",
         
          "marker-color": "#4747A3"
         
@@ -726,7 +726,7 @@
       "type": "Feature",
       "properties": {
         "title": "GEOTEC - UJI Mapathon - Castellon, Spain",
-        "url": "/event/geotec-uji/",
+        "url": "http://localhost:4000/event/geotec-uji/",
         
          "marker-color": "#4747A3"
         
@@ -742,7 +742,7 @@
       "type": "Feature",
       "properties": {
         "title": "ATI-KOS Mapathon - Pristina, Kosovo",
-        "url": "/event/ati-kos/",
+        "url": "http://localhost:4000/event/ati-kos/",
         
          "marker-color": "#4747A3"
         
@@ -758,7 +758,7 @@
       "type": "Feature",
       "properties": {
         "title": "Rinjani Volcano Mapathon, OpenStreetMap Indonesia - Jakarta, Indonesia",
-        "url": "/event/jakarta/",
+        "url": "http://localhost:4000/event/jakarta/",
         
          "marker-color": "#4747A3"
         
@@ -774,7 +774,7 @@
       "type": "Feature",
       "properties": {
         "title": "UCC Friends of MSF Mapathon - Cork, Ireland",
-        "url": "/event/msf-cork/",
+        "url": "http://localhost:4000/event/msf-cork/",
         
          "marker-color": "#4747A3"
         
@@ -790,7 +790,7 @@
       "type": "Feature",
       "properties": {
         "title": "Stanford University Mapathon - Standford, CA",
-        "url": "/event/stanford/",
+        "url": "http://localhost:4000/event/stanford/",
         
          "marker-color": "#4747A3"
         
@@ -806,7 +806,7 @@
       "type": "Feature",
       "properties": {
         "title": "Mapbox Mapathon - Ayacucho, Peru",
-        "url": "/event/mapbox-peru/",
+        "url": "http://localhost:4000/event/mapbox-peru/",
         
          "marker-color": "#4747A3"
         
@@ -822,7 +822,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps and Friends of MSF Newcastle Mapathon - Newcastle, England",
-        "url": "/event/msf-newcastle/",
+        "url": "http://localhost:4000/event/msf-newcastle/",
         
          "marker-color": "#4747A3"
         
@@ -838,7 +838,7 @@
       "type": "Feature",
       "properties": {
         "title": "Ho-Ho-Kus 8th Grade Mapathon - Ho-Ho-Kus, NJ",
-        "url": "/event/ho-ho-kus/",
+        "url": "http://localhost:4000/event/ho-ho-kus/",
         
          "marker-color": "#4747A3"
         
@@ -854,7 +854,7 @@
       "type": "Feature",
       "properties": {
         "title": "Access for All: OSM GeoWeek 2015",
-        "url": "/event/osm-institutions/",
+        "url": "http://localhost:4000/event/osm-institutions/",
         
          "marker-color": "#4747A3"
         
@@ -870,7 +870,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps OSM Mapathon at San Francisco State University - San Francisco, CA",
-        "url": "/event/mm-sfsu/",
+        "url": "http://localhost:4000/event/mm-sfsu/",
         
          "marker-color": "#4747A3"
         
@@ -886,7 +886,7 @@
       "type": "Feature",
       "properties": {
         "title": "Girls Scouts and Peace Corps Mapathon - Washington, DC",
-        "url": "/event/girl-scouts/",
+        "url": "http://localhost:4000/event/girl-scouts/",
         
          "marker-color": "#4747A3"
         
@@ -902,7 +902,7 @@
       "type": "Feature",
       "properties": {
         "title": "Green School Bali Mapathon with HOT - Ubud, Indonesia",
-        "url": "/event/bali-green-school/",
+        "url": "http://localhost:4000/event/bali-green-school/",
         
          "marker-color": "#4747A3"
         
@@ -918,7 +918,7 @@
       "type": "Feature",
       "properties": {
         "title": "University of Exeter Mapathon - Exeter, England",
-        "url": "/event/ue-geog/",
+        "url": "http://localhost:4000/event/ue-geog/",
         
          "marker-color": "#4747A3"
         
@@ -934,7 +934,7 @@
       "type": "Feature",
       "properties": {
         "title": "Columbia University Returned Peace Corps Volunteers Mapathon - New York, NY",
-        "url": "/event/sipa-rpcv/",
+        "url": "http://localhost:4000/event/sipa-rpcv/",
         
          "marker-color": "#4747A3"
         
@@ -950,7 +950,7 @@
       "type": "Feature",
       "properties": {
         "title": "Engineers Without Borders Norway (IUG Norge) - Bergen, Norway",
-        "url": "/event/iug-norge/",
+        "url": "http://localhost:4000/event/iug-norge/",
         
          "marker-color": "#4747A3"
         
@@ -966,7 +966,7 @@
       "type": "Feature",
       "properties": {
         "title": "Temple University Mapathon - Philadelphia, PA",
-        "url": "/event/temple/",
+        "url": "http://localhost:4000/event/temple/",
         
          "marker-color": "#4747A3"
         
@@ -982,7 +982,7 @@
       "type": "Feature",
       "properties": {
         "title": "Dibrugarh University Mapathon - Dibrugarh, India",
-        "url": "/event/dibrugarh/",
+        "url": "http://localhost:4000/event/dibrugarh/",
         
          "marker-color": "#4747A3"
         
@@ -998,7 +998,7 @@
       "type": "Feature",
       "properties": {
         "title": "University of Central Florida Mapathon - Orlando, FL",
-        "url": "/event/ucf/",
+        "url": "http://localhost:4000/event/ucf/",
         
          "marker-color": "#4747A3"
         
@@ -1014,7 +1014,7 @@
       "type": "Feature",
       "properties": {
         "title": "Southern Methodist University Mapathon - Dallas, TX",
-        "url": "/event/smu/",
+        "url": "http://localhost:4000/event/smu/",
         
          "marker-color": "#4747A3"
         
@@ -1030,7 +1030,7 @@
       "type": "Feature",
       "properties": {
         "title": "Politecnico di Milano Mapathon - Milano, Italy",
-        "url": "/event/polimi/",
+        "url": "http://localhost:4000/event/polimi/",
         
          "marker-color": "#4747A3"
         
@@ -1046,7 +1046,7 @@
       "type": "Feature",
       "properties": {
         "title": "Alice Deal Middle School Mapathon - Washington, DC",
-        "url": "/event/dean-ms/",
+        "url": "http://localhost:4000/event/dean-ms/",
         
          "marker-color": "#4747A3"
         
@@ -1062,7 +1062,7 @@
       "type": "Feature",
       "properties": {
         "title": "Clark University Mapathon - Worcester, MA",
-        "url": "/event/clark-u/",
+        "url": "http://localhost:4000/event/clark-u/",
         
          "marker-color": "#4747A3"
         
@@ -1078,7 +1078,7 @@
       "type": "Feature",
       "properties": {
         "title": "OSM Brasilia Mapathon - Brasilia, Brazil",
-        "url": "/event/osm-brasilia/",
+        "url": "http://localhost:4000/event/osm-brasilia/",
         
          "marker-color": "#4747A3"
         
@@ -1094,7 +1094,7 @@
       "type": "Feature",
       "properties": {
         "title": "GW Humanitarian Mapping Society Mapathon - Washington, DC",
-        "url": "/event/hms-gwu/",
+        "url": "http://localhost:4000/event/hms-gwu/",
         
          "marker-color": "#4747A3"
         
@@ -1110,7 +1110,7 @@
       "type": "Feature",
       "properties": {
         "title": "Land & Property Services Mapathon - Belfast, N. Ireland",
-        "url": "/event/n-ireland/",
+        "url": "http://localhost:4000/event/n-ireland/",
         
          "marker-color": "#4747A3"
         
@@ -1126,7 +1126,7 @@
       "type": "Feature",
       "properties": {
         "title": "University of Maryland Mapathon - College Park, MD",
-        "url": "/event/umd/",
+        "url": "http://localhost:4000/event/umd/",
         
          "marker-color": "#4747A3"
         
@@ -1142,7 +1142,7 @@
       "type": "Feature",
       "properties": {
         "title": "Peace Corps Community Mapping Party - Washington, DC",
-        "url": "/event/peace-corps-dc/",
+        "url": "http://localhost:4000/event/peace-corps-dc/",
         
          "marker-color": "#4747A3"
         
@@ -1158,7 +1158,7 @@
       "type": "Feature",
       "properties": {
         "title": "Mapping day Uganda - Wairaka, Uganda",
-        "url": "/event/uganda-wairaka/",
+        "url": "http://localhost:4000/event/uganda-wairaka/",
         
          "marker-color": "#4747A3"
         
@@ -1174,7 +1174,7 @@
       "type": "Feature",
       "properties": {
         "title": "Mapping Day Uganda - BIT MAK Jinja, Uganda",
-        "url": "/event/uganda-jinja/",
+        "url": "http://localhost:4000/event/uganda-jinja/",
         
          "marker-color": "#4747A3"
         
@@ -1190,7 +1190,7 @@
       "type": "Feature",
       "properties": {
         "title": "TeachOSM Mapathon - Washington, DC",
-        "url": "/event/teachOSM/",
+        "url": "http://localhost:4000/event/teachOSM/",
         
          "marker-color": "#4747A3"
         
@@ -1206,7 +1206,7 @@
       "type": "Feature",
       "properties": {
         "title": "University of São Paulo Mapathon - São Carlos, Brazil",
-        "url": "/event/sao-paulo/",
+        "url": "http://localhost:4000/event/sao-paulo/",
         
          "marker-color": "#4747A3"
         
@@ -1222,7 +1222,7 @@
       "type": "Feature",
       "properties": {
         "title": "Colorado State University Humanitarian Mapathon - Fort Collins, CO",
-        "url": "/event/colorado-state/",
+        "url": "http://localhost:4000/event/colorado-state/",
         
          "marker-color": "#4747A3"
         
@@ -1238,7 +1238,7 @@
       "type": "Feature",
       "properties": {
         "title": "Mapathon - Kampala, Uganda",
-        "url": "/event/kampala/",
+        "url": "http://localhost:4000/event/kampala/",
         
          "marker-color": "#4747A3"
         
@@ -1254,7 +1254,7 @@
       "type": "Feature",
       "properties": {
         "title": "Communauté OpenStreeMap Benin - Cotonou, Benin",
-        "url": "/event/cotonou/",
+        "url": "http://localhost:4000/event/cotonou/",
         
          "marker-color": "#4747A3"
         
@@ -1270,7 +1270,7 @@
       "type": "Feature",
       "properties": {
         "title": "HOT Mapathon - Dar es Salaam, Tanzania",
-        "url": "/event/dar-es-salaam/",
+        "url": "http://localhost:4000/event/dar-es-salaam/",
         
          "marker-color": "#4747A3"
         
@@ -1286,7 +1286,7 @@
       "type": "Feature",
       "properties": {
         "title": "Colegio Salesiano de Duitama - Duitama, Colombia",
-        "url": "/event/duitama/",
+        "url": "http://localhost:4000/event/duitama/",
         
          "marker-color": "#4747A3"
         
@@ -1302,7 +1302,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps and MSF UK - London, England",
-        "url": "/event/missingmaps-london/",
+        "url": "http://localhost:4000/event/missingmaps-london/",
         
          "marker-color": "#4747A3"
         
@@ -1318,7 +1318,7 @@
       "type": "Feature",
       "properties": {
         "title": "George Mason University - Fairfax, VA",
-        "url": "/event/george-mason/",
+        "url": "http://localhost:4000/event/george-mason/",
         
          "marker-color": "#4747A3"
         

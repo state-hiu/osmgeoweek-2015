@@ -8,7 +8,7 @@
       "type": "Feature",
       "properties": {
         "title": "Open Data for Resilience",
-        "url": "/project/Atanagalu"
+        "url": "http://localhost:4000/project/Atanagalu"
       },
       "geometry": {
         "type": "Polygon",
@@ -45,7 +45,7 @@
       "type": "Feature",
       "properties": {
         "title": "Quelimane, Mozambique",
-        "url": "/project/Quelimane"
+        "url": "http://localhost:4000/project/Quelimane"
       },
       "geometry": {
         "type": "Polygon",
@@ -82,7 +82,7 @@
       "type": "Feature",
       "properties": {
         "title": "Nyamira, Kenya",
-        "url": "/project/nyamira"
+        "url": "http://localhost:4000/project/nyamira"
       },
       "geometry": {
         "type": "Polygon",
@@ -121,7 +121,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps – American Red Cross/ Kenya Red Cross",
-        "url": "/project/machakos"
+        "url": "http://localhost:4000/project/machakos"
       },
       "geometry": {
         "type": "Polygon",
@@ -158,7 +158,7 @@
       "type": "Feature",
       "properties": {
         "title": "Ambon City, Indonesia",
-        "url": "/project/ambon"
+        "url": "http://localhost:4000/project/ambon"
       },
       "geometry": {
         "type": "Polygon",
@@ -195,7 +195,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps - American Red Cross/Haitian Red Cross",
-        "url": "/project/canaan-haiti"
+        "url": "http://localhost:4000/project/canaan-haiti"
       },
       "geometry": {
         "type": "Polygon",
@@ -232,7 +232,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps - Red Cross Partners",
-        "url": "/project/cape-town"
+        "url": "http://localhost:4000/project/cape-town"
       },
       "geometry": {
         "type": "Polygon",
@@ -270,7 +270,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps - Médecins Sans Frontières (MSF)",
-        "url": "/project/south-kivu"
+        "url": "http://localhost:4000/project/south-kivu"
       },
       "geometry": {
         "type": "Polygon",
@@ -307,7 +307,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps - Médecins Sans Frontières (MSF)",
-        "url": "/project/msf-sudan"
+        "url": "http://localhost:4000/project/msf-sudan"
       },
       "geometry": {
         "type": "Polygon",
@@ -344,7 +344,7 @@
       "type": "Feature",
       "properties": {
         "title": "Missing Maps – Médecins Sans Frontières (MSF)",
-        "url": "/project/lubumbashi"
+        "url": "http://localhost:4000/project/lubumbashi"
       },
       "geometry": {
         "type": "Polygon",
